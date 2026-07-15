@@ -1,0 +1,49 @@
+{
+    "Starter Template": {
+        "prefix": "vsTaskHeader",
+        "body": [
+            "{",
+            "\t\"version\": \"2.0.0\",",
+            "\t\"tasks\": [",
+            "\t\t$0",
+            "\t]",
+            "}"
+        ],
+        "scope": "json"
+    },
+    "Tasks": {
+        "prefix": "vsTasks",
+        "body": [
+            "{",
+            "\t\"label\": \"$1\",",
+            "\t\"type\": \"shell\",",
+            "\t\"command\": \"$2\",",
+            "\t\"args\": [ $3 ],",
+            "\t\"group\": {",
+            "\t\t\"kind\": \"build\",",
+            "\t\t\"isDefault\": true",
+            "\t}$0",
+            "}"
+        ],
+        "scope": "json"
+    },
+    "Presentation": {
+        "prefix": "presentation",
+        "body": [
+            "\"presentation\": {",
+            "\t\"reveal\": \"always\",",
+            "\t\"panel\": \"new\",",
+            "}"
+        ],
+        "scope": "json"
+    },
+    "ProblemMatcher": {
+        "prefix": "problemMatcher",
+        "body": [
+            "\"problemMatcher\": [",
+            "\t$0",
+            "]"
+        ],
+        "scope": "json"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "agentOverrides": {
+        "planner": {
+            "model": "opencode-go/qwen3.7-plus"
+        },
+        "worker": {
+            "model": "opencode-go/kimi-k2.7-code"
+        },
+        "reviewer": {
+            "model": "opencode-go/mimo-v2.5-pro"
+        },
+        "oracle": {
+            "model": "opencode-go/qwen3.7-max"
+        }
+    }
+}
+

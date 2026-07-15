@@ -1,0 +1,80 @@
+{
+  "providers": {
+    "dupont": {
+      "baseUrl": "http://172.25.11.30/v1",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "ornith-1.0-35B",
+          "name": "ornith-1.0-35B",
+          "reasoning": true,
+          "input": ["text"],
+          "contextWindow": 131072,
+          "maxTokens": 131072,
+          "cost": { "input": 1, "output": 1, "cacheRead": 1, "cacheWrite": 1 }
+        }
+      ],
+      "compat": {
+        "supportsDeveloperRole": true,
+        "supportsReasoningEffort": true
+      }
+    },
+    "obelix": {
+      "baseUrl": "http://172.25.11.32/v1",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "ornith-1.0-35B",
+          "name": "ornith-1.0-35B",
+          "reasoning": true,
+          "input": ["text"],
+          "contextWindow": 131072,
+          "maxTokens": 131072,
+          "cost": { "input": 1, "output": 1, "cacheRead": 1, "cacheWrite": 1 }
+        }
+      ],
+      "compat": {
+        "supportsDeveloperRole": true,
+        "supportsReasoningEffort": true
+      }
+    },
+    "bianca": {
+      "baseUrl": "http://172.25.11.33/v1",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "gemma-4-12B-coder",
+          "name": "gemma-4-12B-coder",
+          "reasoning": true,
+          "input": ["text"],
+          "contextWindow": 128000,
+          "maxTokens": 65536,
+          "cost": { "input": 1, "output": 1, "cacheRead": 1, "cacheWrite": 1 }
+        }
+      ],
+      "compat": {
+        "supportsDeveloperRole": true,
+        "supportsReasoningEffort": true
+      }
+    },
+    "cloudflare": {
+      "baseUrl": "https://api.cloudflare.com/client/v4/accounts/e54fa0b493ef3bef55746b1de8d33693/ai/v1",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "@cf/zai-org/glm-5.2",
+          "name": "@cf/zai-org/glm-5.2",
+          "reasoning": true,
+          "input": ["text"],
+          "contextWindow": 256000,
+          "maxTokens": 256000,
+          "cost": { "input": 1, "output": 1, "cacheRead": 1, "cacheWrite": 1 }
+        }
+      ],
+      "compat": {
+        "supportsDeveloperRole": true,
+        "supportsReasoningEffort": true
+      }
+    }
+  }
+}

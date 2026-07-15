@@ -1,0 +1,21 @@
+{
+      "name": "sjb_snippets",
+      "contributes": {
+          "snippets": [
+              {
+                  "language": [
+                      "json"
+                  ],
+                  "path": "./json.json"
+              },
+              {
+                  "language": [
+                      "rust",
+                      "global",
+                      "all"
+                  ],
+                  "path": "./copyright.json"
+              }
+          ]
+      }
+  }

@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "searchEnabled": true,
+  "fetchEnabled": true,
+  "providerOverrides": {
+    "claude-bridge": {
+      "searchEnabled": false
+    },
+    "opencode": {
+      "searchEnabled": true
+    }
+  }
+}

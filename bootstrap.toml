@@ -1,0 +1,10 @@
+[bootstrap.packages]
+'apk:git' = "latest"
+'pacman:git' = "latest"
+'dnf:git' = "latest"
+
+[bootstrap.repos]                         # git repos cloned before dotfiles
+"~/.dotfiles" = { url = "https://github.com:SjB/minimal-dotfiles.git", ref = "main" }
+
+[dotfiles]
+"~/.config/mise/config.toml" = "config/mise/config.toml"

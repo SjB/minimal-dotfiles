@@ -1,0 +1,10 @@
+{
+    "gCopyright": {
+        "prefix": "copy",
+        "description": "Generic Copyright",
+        "body": [
+            "Copyright (c) ${CURRENT_YEAR} ${1:Author} <${2:email}>. All Rights Reserved.",
+            "$0"
+        ]
+    }
+}

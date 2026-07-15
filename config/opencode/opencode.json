@@ -1,0 +1,75 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "model": "opencode-go/mimo-v2.5-pro",
+    "autoupdate": true,
+    "share": "disabled",
+    "provider": {
+        "vllm": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "dupont vLLM server",
+            "options": {
+                "baseURL": "http://172.25.11.32/v1"
+            },
+            "models": {
+                "north-mini-code": { 
+                    "name": "north-mini-code",
+                    "limit": {
+                        "context": 32768,
+                        "output": 4096
+                    }
+                }
+            }
+        },
+        "allears": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "allears",
+            "options": {
+                "baseURL": "http://192.168.33.74:11434/v1"
+            },
+            "models": {
+                "qwen3.5": {
+                    "name": "qwen3.5:35b"
+                },
+                "qwen3.6": {
+                    "name": "qwen3.6:35b"
+                },
+                "lfm2": {
+                    "name": "lfm2:latest"
+                }
+            }
+        },
+        "dupont": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "dupont",
+            "options": {
+                "discoverModels": true,
+                "baseURL": "http://172.25.11.30/v1"
+            },
+            "models": {
+                "north-mini-code": { "name": "north-mini-code" }
+            }
+        },
+        "obelix": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "obelix",
+            "options": {
+                "discoverModels": true,
+                "baseURL": "http://172.25.11.32/v1"
+            },
+            "models": {
+                "north-mini-code": { "name": "north-mini-code" }
+            }
+        },
+        "bianca": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "bianca",
+            "options": {
+                "discoverModels": true,
+                "baseURL": "http://172.25.11.33/v1"
+            },
+            "models": {
+                "north-mini-code": { "name": "north-mini-code" }
+            }
+        }
+    }
+}
