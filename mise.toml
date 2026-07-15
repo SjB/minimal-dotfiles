@@ -15,7 +15,7 @@ dotfiles.default_mode = "symlink"
 # "~/.config/fish/conf.d/mise.fish" = { block = '/usr/bin/mise activate fish | source' }
 "~/.config/fish/config.fish" = "config/fish/config.fish"
 "~/.config/git/config" = "config/git/config"
-"~/.config/git/local" = { source = "templates/git.tmpl", template = "tera" }
+"~/.config/git/local" = { source = "templates/git.tmpl", mode = "template", template = "tera" }
 
 [bootstrap.mise_shell_activate] # mise activation in shell startup files
 zprofile = "shims"
