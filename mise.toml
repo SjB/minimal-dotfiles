@@ -1,0 +1,6 @@
+[settings]
+dotfiles.root = "{{config_root}}"
+dotfiles.default_mode = "symlink"
+
+[dotfiles]
+"~/.config/mise/config.toml" = {}

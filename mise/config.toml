@@ -1,0 +1,28 @@
+[settings]
+experimental = true
+dotfiles.root = "{{config_root}}"
+dotfiles.default_mode = "symlink"
+
+[dotfiles]
+"~/.config/mise/config.toml" = {}
+
+[tools]
+age = "latest"
+bun = "latest"
+"cargo:cargo-llvm-cov" = "latest"
+codex = "latest"
+copilot-cli = "latest"
+"github:ZinoKader/portal" = "latest"
+"github:danielmiessler/fabric" = "latest"
+"github:mrusme/reader" = "latest"
+"github:ulyssa/iamb" = "latest"
+herdr = "latest"
+neovim = "latest"
+node = "latest"
+"npm:@earendil-works/pi-coding-agent" = "latest"
+"npm:mermaid-cli" = "latest"
+"npm:pi-acp" = "latest"
+opencode = "latest"
+pi = "latest"
+tree-sitter = "latest"
+worktrunk = "latest"
