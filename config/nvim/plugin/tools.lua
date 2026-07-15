@@ -14,26 +14,16 @@ if vim.fn.executable("just") == 1 then
     })
 end
 
-require('img-clip').setup()
-require('image').setup({
-    backend = "sixel"
-})
-
-require('sshfs').setup({
-    mounts = {
-        base_dir = vim.fn.expand("$HOME") .. "/Public", -- where remote mounts are created
-    },
-    lead_prefix = "<leader>t",     
-    -- Refer to the configuration section below
-    -- or leave empty for defaults
-})
-
+if vim.fn.executable("mise") == 1 then
 require('mise').setup({
     unset_vars = true,
     load_on_setup = true,
     force_run = true,
 })
+end
 
+
+if vim.fn.executable("git") == 1 then
 require('neogit').setup({
     -- disable_context_highlighting = true,
     disable_commit_confirmation = true,
@@ -50,6 +40,7 @@ require('neogit').setup({
         recent = { folded = false },
     },
 })
+end
 
 if vim.fn.executable("zoxide") == 1 then
     require('zincoxide').setup({
@@ -76,11 +67,6 @@ vim.api.nvim_create_autocmd('PackChanged', {
     end
 })
 
-require("jupynvim").setup({
-    log_level = "debug",
-    image_renderer = "placeholder",  -- "placeholder", "kitty", or "chafa"
-})
-
 require("overseer").setup({
     templates = { "builtin", "user" },
     component_aliases = {
@@ -100,20 +86,6 @@ require("overseer").setup({
         },
     }
 })
-
--- local pm = require("overseer.template.vscode.problem_matcher")
--- pm.register_problem_matcher("$rustc", {
-    --      fileLocation = { "autoDetect", "${cwd}" },
-    --      pattern = {
-        --          --regexp = "^(.*?)-->\\s+(.*?):(\\d+):(\\d+)$",
-        --          -- vim_regexp = "\\v^(.*?)-->\\s+(.*?):(\\d+):(\\d+)$",
-        --          regexp = "^\\s+-->\\s*([^:]*):(\\d+):(\\d+)$",
-        --          vim_regexp = "\\v^\\s+-->\\s*([^:]*):(\\d+):(\\d+)$",
-        --          file = 1,
-        --          line = 2,
-        --          column = 3,
-        --      }
-        -- })
 
 local osys = require("cmake-tools.osys")
 require("cmake-tools").setup {

@@ -22,7 +22,3 @@ zprofile = "shims"
 zshrc = "activate"
 fish = "activate"
 bash = "activate"
-
-[bootstrap.user]                       # current user's login shell
-login_shell = "/usr/bin/fish"
-
