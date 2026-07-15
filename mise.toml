@@ -1,6 +1,28 @@
+[env]
+USER_FULLNAME = "Steve Beulac"
+USER_EMAIL = "steve@beaulac.me"
+
 [settings]
 dotfiles.root = "{{config_root}}"
 dotfiles.default_mode = "symlink"
 
 [dotfiles]
 "~/.config/mise/config.toml" = "config/mise/config.toml"
+"~/.agents/AGENTS.md" = "config/agents/AGENTS.md"
+"~/.pi/agents/AGENTS.md" = "config/agents/AGENTS.md"
+"~/.config/nvim/" = { source = "config/nvim", mode = "symlink-each" }
+"~/.config/opencode" = { source = "config/opencode", mode = "symlink-each" }
+# "~/.config/fish/conf.d/mise.fish" = { block = '/usr/bin/mise activate fish | source' }
+"~/.config/fish/config.fish" = "config/fish/config.fish"
+"~/.config/git/config" = "config/git/config"
+"~/.config/git/local" = { source = "templates/git.tmpl", template = "tera" }
+
+[bootstrap.mise_shell_activate] # mise activation in shell startup files
+zprofile = "shims"
+zshrc = "activate"
+fish = "activate"
+bash = "activate"
+
+[bootstrap.user]                       # current user's login shell
+login_shell = "/usr/bin/fish"
+
