@@ -4,11 +4,8 @@ USER_EMAIL = "steve@beaulac.me"
 
 [settings]
 experimental = true
-dotfiles.root = "{{config_root}}"
+dotfiles.root = "~/.dotfiles"
 dotfiles.default_mode = "symlink"
-
-[bootstrap.repos]                         # git repos cloned before dotfiles
-"~/src/dotfiles" = { url = "git@github.com:SjB/minimal-dotfiles.git", ref = "main" }
 
 [dotfiles]
 "~/.config/mise/config.toml" = "config/mise/config.toml"
