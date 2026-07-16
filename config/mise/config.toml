@@ -6,7 +6,6 @@ USER_EMAIL = "steve@beaulac.me"
 experimental = true
 
 [tools]
-"aqua:fish-shell/fish-shell" = "latest"
 age = "latest"
 bun = "latest"
 rust = "latest"
