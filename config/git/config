@@ -1,6 +1,5 @@
-[user]
-name = Steve Beaulac
-email = steve@beaulac.me
+[include]
+path = ~/.config/git/local
 
 [pull]
 rebase = true
