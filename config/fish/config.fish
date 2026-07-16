@@ -31,9 +31,6 @@ if status is-interactive
 
     if command -q fzf
        fzf --fish | source
-       alias zk="nvim \$(fzf --walker=file --walker-root=/home/sjb/Documents/nca-notes/ --preview 'bat --color=always -n --line-range :500 {}')"
-       #set -gx FZF_CTRL_T_OPTS  "--preview 'bat --color=always -n --line-range :500 {}'"
-       #set -gx FZF_ALT_C_OPTS "--preview 'eza --icons=always --color=always {} | head -200'"
     end
 
     if command -q jj
@@ -59,7 +56,6 @@ if status is-interactive
 
     command -q lazygit && alias lg lazygit
 
-
     if command -q nvim
         set -gx EDITOR nvim
     else if command -qv vim
@@ -82,14 +78,19 @@ if status is-interactive
         alias oc "opencode"
     end
 
+    if command -q bat
+        alias cat="bat"
+    end
+
     # Commands to run in interactive sessions can go here
-    alias ll="exa -l -g --icons"
-    alias ls="exa -al --color=always --group-directories-first"
-    alias oo="cd ~/Documents/nca-notes/"
-    alias on="v +Obsidian new"
-    alias os="v +Obsidian search"
-    alias cat="bat"
-    alias g=git
+    if command -q eza 
+        alias ll="eza -l -g --icons"
+        alias ls="eza -al --color=always --group-directories-first"
+    end
+
+    if command -q git
+        alias g=git
+    end
 
     set -gx VISUAL $EDITOR
 
