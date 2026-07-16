@@ -15,9 +15,11 @@ dotfiles.default_mode = "symlink"
 "~/.config/fish/config.fish" = "config/fish/config.fish"
 "~/.config/git/config" = "config/git/config"
 "~/.config/git/local" = { source = "templates/git.tmpl", mode = "template", template = "tera" }
+"~/.bash_profile/mise" = { block = 'eval "$(mise activate bash)"' }
+"~/.bash_profile/zoxide" = { block = 'eval "$(zoxide init bash)"' }
+"~/.bash_profile/fzf" = { block = 'eval "$(fzf --bash)"' }
 
 [bootstrap.mise_shell_activate] # mise activation in shell startup files
 zprofile = "shims"
 zshrc = "activate"
-fish = "activate"
-bash = "activate"
+
