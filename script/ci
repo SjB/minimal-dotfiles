@@ -1,0 +1,2 @@
+#!/usr/bin/env -S /bin/sh
+pi --model opencode-go/deepseek-v4-flash -p /skill:commit-staged

@@ -1,0 +1,39 @@
+#!/usr/bin/env sh
+
+required_tools=(realpath nvim)
+missing=()
+
+for tool in "${required_tools[@]}"; do
+    if ! command -v "$tool" &> /dev/null; then
+        missing+=("$tool")
+    fi
+done
+
+if [ "${#missing[@]}" -ne 0 ]; then
+    echo "$0: error: missing required tools: ${missing[*]}" >&2
+    exit 1
+fi
+
+for arg in "$@"; do
+    if [ -d "$arg" ]; then
+        echo "$0: error: '$arg' is a directory" >&2
+        exit 1
+    fi
+done
+
+if [ ! -z "$NVIM" ]; then
+    # inside neovim
+    if [ "$#" -ne "0" ]; then
+        realpath --zero "$@" | xargs -0 -n1 nvim --server "$NVIM" --remote
+    fi
+    exit
+fi
+
+# outside neovim
+
+if [ "$#" -eq "0" ]; then
+    nvim
+    exit
+fi
+
+nvim "$@"
