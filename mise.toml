@@ -13,6 +13,7 @@ dotfiles.default_mode = "symlink"
 "~/.config/nvim/" = { source = "config/nvim", mode = "symlink-each" }
 "~/.config/opencode" = { source = "config/opencode", mode = "symlink-each" }
 "~/.config/fish/config.fish" = "config/fish/config.fish"
+"~/.config/herdr/config.toml" = "config/herdr/config.toml"
 "~/.config/git/config" = "config/git/config"
 "~/.config/git/local" = { source = "templates/git.tmpl", mode = "template", template = "tera" }
 "~/.bash_profile/mise" = { block = 'eval "$(mise activate bash)"' }
