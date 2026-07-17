@@ -47,30 +47,8 @@ require('blink.cmp').setup({
             },
             signature = { enabled = true },
             sources = {
-                per_filetype = {
-                    org = {'orgmode'}
-                },
-                default = { 'orgmode', 'lsp', 'copilot', 'snippets', 'path', 'omni', 'buffer', 'codecompanion', 'markdown' },
-                -- default = { 'orgmode', 'lsp', 'snippets', 'path', 'omni', 'buffer', 'codecompanion', 'markdown' },
+                default = { 'lsp', 'copilot', 'snippets', 'path', 'omni', 'buffer', 'markdown' },
                 providers = {
-                    codecompanion = {
-                        name = "CodeCompanion" ,
-                        module = "codecompanion.providers.completion.blink",
-                        enabled = true,
-                        score_offset = 100,
-                        async = true,
-                    },
-                    orgmode = {
-                        name = 'Orgmode',
-                        module = 'orgmode.org.autocompletion.blink',
-                        fallbacks = { 'buffer' },
-                    },
-                    copilot = {
-                        name = 'copilot',
-                        module = 'blink-copilot',
-                        score_offset = 100,
-                        async = true,
-                    },
                     markdown = {
                         name = 'RenderMarkdown',
                         module = 'render-markdown.integ.blink',
@@ -124,8 +102,6 @@ require('blink.cmp').setup({
             appearance = {
                 -- Blink does not expose its default kind icons so you must copy them all (or set your custom ones) and add Copilot
                 kind_icons = {
-                    Copilot = "",
-                    CodeCompanion = "",
                     Text = '󰉿',
                     Method = '󰊕',
                     Function = '󰊕',
