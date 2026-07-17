@@ -47,7 +47,7 @@ require('blink.cmp').setup({
             },
             signature = { enabled = true },
             sources = {
-                default = { 'lsp', 'copilot', 'snippets', 'path', 'omni', 'buffer', 'markdown' },
+                default = { 'lsp', 'snippets', 'path', 'omni', 'buffer', 'markdown' },
                 providers = {
                     markdown = {
                         name = 'RenderMarkdown',
