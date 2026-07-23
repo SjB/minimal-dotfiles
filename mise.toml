@@ -9,6 +9,7 @@ dotfiles.default_mode = "symlink"
 [dotfiles]
 "~/.config/mise/config.toml" = "config/mise/config.toml"
 "~/.agents/AGENTS.md" = "config/agents/AGENTS.md"
+"~/.pi" = { source = "config/pi", mode = "symlink-each" }
 "~/.pi/agents/AGENTS.md" = "config/agents/AGENTS.md"
 "~/.config/nvim/" = { source = "config/nvim", mode = "symlink-each" }
 "~/.config/opencode" = { source = "config/opencode", mode = "symlink-each" }
