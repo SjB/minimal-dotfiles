@@ -20,10 +20,11 @@ dotfiles.default_mode = "symlink"
 "~/.bash_profile/zoxide" = { block = 'eval "$(zoxide init bash)"' }
 "~/.bash_profile/fzf" = { block = 'eval "$(fzf --bash)"' }
 "~/.bash_aliases" = { source = "config/bash/aliases", mode = "symlink" }
-"~/.config/zero" = { source = "config/zero", mode =  "symlink-each" }
+"~/.config/zero/config.json" = { source = "config/zero", mode =  "copy" }
 
 "~/.local/bin/tmux-open" = { source = "script/tmux-open", mode = "symlink" }
 "~/.local/bin/ci" = { source = "script/ci", mode = "symlink" }
+"~/.local/bin/n" = { source = "script/n", mode = "symlink" }
 "~/.local/bin/git-bare-clone" = { source = "script/git-bare-clone", mode = "symlink" }
 
 [bootstrap.mise_shell_activate] # mise activation in shell startup files

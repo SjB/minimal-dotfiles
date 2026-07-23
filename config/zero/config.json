@@ -1,5 +1,5 @@
 {
-  "activeProvider": "copilot",
+  "activeProvider": "obelix",
   "providers": [
     {
       "name": "chatgpt",
@@ -15,6 +15,7 @@
       "catalogID": "custom-openai-compatible",
       "baseURL": "http://172.25.11.30/v1",
       "apiKeyEnv": "SAGACITY_API_KEY",
+      "apiKeyStored": true,
       "apiFormat": "chat-completions",
       "model": "glm-4.7-flash"
     },
@@ -24,6 +25,7 @@
       "catalogID": "custom-openai-compatible",
       "baseURL": "http://172.25.11.32/v1",
       "apiKeyEnv": "SAGACITY_API_KEY",
+      "apiKeyStored": true,
       "apiFormat": "chat-completions",
       "model": "ornith-1.0-35B"
     },
@@ -33,28 +35,19 @@
       "catalogID": "custom-openai-compatible",
       "baseURL": "http://172.25.11.33/v1",
       "apiKeyEnv": "SAGACITY_API_KEY",
+      "apiKeyStored": true,
       "apiFormat": "chat-completions",
       "model": "gemma-4-12B-coder"
     },
     {
       "name": "opencode-go",
       "provider_kind": "openai-compatible",
-      "catalogID": "custom-openai-compatible",
+      "catalogID": "opencode-go",
       "baseURL": "https://opencode.ai/zen/go/v1",
       "apiKeyEnv": "OPENCODE_API_KEY",
+      "apiKeyStored": true,
       "apiFormat": "chat-completions",
       "model": "hy3"
-    },
-    {
-      "name": "copilot",
-      "provider_kind": "openai-compatible",
-      "catalogID": "github-copilot",
-      "baseURL": "https://api.individual.githubcopilot.com/openai/v1",
-      "apiFormat": "chat-completions",
-      "customHeaders": {
-        "OpenAI-Beta": "on"
-      },
-      "model": "gpt-5-mini"
     }
   ],
   "mcp": {},
@@ -65,12 +58,12 @@
   "preferences": {
     "recentModels": [
       {
-        "provider": "copilot",
-        "model": "gpt-5-mini"
+        "provider": "obelix",
+        "model": "ornith-1.0-35B"
       },
       {
-        "provider": "copilot",
-        "model": "mai-code-1-flash-picker"
+        "provider": "bianca",
+        "model": "gemma-4-12B-coder"
       },
       {
         "provider": "chatgpt",
