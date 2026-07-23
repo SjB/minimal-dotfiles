@@ -22,6 +22,7 @@ dotfiles.default_mode = "symlink"
 "~/.bash_profile/fzf" = { block = 'eval "$(fzf --bash)"' }
 "~/.bash_aliases" = { source = "config/bash/aliases", mode = "symlink" }
 "~/.config/zero/config.json" = { source = "config/zero", mode =  "copy" }
+"~/.config/worktrunk/config.toml" = { source = "config/worktrunk/config.toml", mode = "symlink" }
 
 "~/.local/bin/tmux-open" = { source = "script/tmux-open", mode = "symlink" }
 "~/.local/bin/ci" = { source = "script/ci", mode = "symlink" }

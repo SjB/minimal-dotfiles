@@ -1,0 +1,14 @@
+worktree-path = "{{ repo_path }}/../wt-{{ branch | sanitize }}"
+
+[list]
+summary = true
+
+[commit.generation]
+command = "goose run -i -"
+
+[pre-start]
+misetrust = "mise trust"
+
+[post-switch]
+tmux = "[ -n \"$TMUX\" ] && tmux rename-window {{ branch | sanitize }}"
+
