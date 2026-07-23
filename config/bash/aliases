@@ -1,0 +1,8 @@
+alias zero='zero.js'
+alias wtc="wt switch --create --execute=$EDITOR"
+alias wts="wt switch"
+alias wtr="wt remove @"
+alias ll="eza -l -g --icons"
+alias ls="eza -al --color=always --group-directories-first"
+alias g="git"
+

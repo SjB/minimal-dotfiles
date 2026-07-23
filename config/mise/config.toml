@@ -14,6 +14,7 @@ codex = "latest"
 copilot-cli = "latest"
 croc = "latest"
 fd = "latest"
+"github:Gitlawb/zero" = "latest"
 "github:danielmiessler/fabric" = "latest"
 "github:mrusme/reader" = "latest"
 "github:ulyssa/iamb" = "latest"
@@ -33,3 +34,21 @@ fzf = "latest"
 rust = "latest"
 tree-sitter = "latest"
 worktrunk = "latest"
+
+
+[tasks.setup_pi]
+run = [
+    'pi install npm:pi-lens',
+    'pi install npm:pi-native-search',
+    'pi install npm:@tintinweb/pi-subagents',
+    'pi install npm:context-mode',
+    'pi install npm:@gotgenes/pi-permission-system',
+    'test -x /usr/bin/pass && /usr/bin/pass show config/pi/auth.json > ~/.pi/agent/auth.json'
+]
+
+[tasks.skills]
+run = [
+    'npx skills add SjB/skills',
+    'npx skills add mattpocock/skills'	
+]
+

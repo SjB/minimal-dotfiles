@@ -1,0 +1,91 @@
+{
+  "activeProvider": "copilot",
+  "providers": [
+    {
+      "name": "chatgpt",
+      "provider_kind": "openai-compatible",
+      "catalogID": "chatgpt",
+      "baseURL": "https://chatgpt.com/backend-api/codex",
+      "apiFormat": "chat-completions",
+      "model": "gpt-5.5"
+    },
+    {
+      "name": "dupont",
+      "provider_kind": "openai-compatible",
+      "catalogID": "custom-openai-compatible",
+      "baseURL": "http://172.25.11.30/v1",
+      "apiKeyEnv": "SAGACITY_API_KEY",
+      "apiFormat": "chat-completions",
+      "model": "glm-4.7-flash"
+    },
+    {
+      "name": "obelix",
+      "provider_kind": "openai-compatible",
+      "catalogID": "custom-openai-compatible",
+      "baseURL": "http://172.25.11.32/v1",
+      "apiKeyEnv": "SAGACITY_API_KEY",
+      "apiFormat": "chat-completions",
+      "model": "ornith-1.0-35B"
+    },
+    {
+      "name": "bianca",
+      "provider_kind": "openai-compatible",
+      "catalogID": "custom-openai-compatible",
+      "baseURL": "http://172.25.11.33/v1",
+      "apiKeyEnv": "SAGACITY_API_KEY",
+      "apiFormat": "chat-completions",
+      "model": "gemma-4-12B-coder"
+    },
+    {
+      "name": "opencode-go",
+      "provider_kind": "openai-compatible",
+      "catalogID": "custom-openai-compatible",
+      "baseURL": "https://opencode.ai/zen/go/v1",
+      "apiKeyEnv": "OPENCODE_API_KEY",
+      "apiFormat": "chat-completions",
+      "model": "hy3"
+    },
+    {
+      "name": "copilot",
+      "provider_kind": "openai-compatible",
+      "catalogID": "github-copilot",
+      "baseURL": "https://api.individual.githubcopilot.com/openai/v1",
+      "apiFormat": "chat-completions",
+      "customHeaders": {
+        "OpenAI-Beta": "on"
+      },
+      "model": "gpt-5-mini"
+    }
+  ],
+  "mcp": {},
+  "sandbox": {},
+  "notify": {},
+  "tools": {},
+  "swarm": {},
+  "preferences": {
+    "recentModels": [
+      {
+        "provider": "copilot",
+        "model": "gpt-5-mini"
+      },
+      {
+        "provider": "copilot",
+        "model": "mai-code-1-flash-picker"
+      },
+      {
+        "provider": "chatgpt",
+        "model": "gpt-5.5"
+      },
+      {
+        "provider": "opencode-go",
+        "model": "hy3"
+      },
+      {
+        "provider": "opencode-go",
+        "model": "deepseek-v4-flash"
+      }
+    ],
+    "theme": "auto"
+  },
+  "keybindings": {}
+}

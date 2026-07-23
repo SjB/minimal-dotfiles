@@ -1,0 +1,43 @@
+#!/bin/sh -e
+
+usage() {
+    cat <<'EOF'
+Usage: git bare-clone [-d bare-repo-dir] [-h] <git-repo-url> [workspace]
+EOF
+}
+
+BARE_REPO_DIR="./.git-repo"
+while getopts ":d:h" opt; do
+    case "$opt" in
+        d) BARE_REPO_DIR="$OPTARG" ;;
+        h) usage; exit 0 ;;
+        :) echo "Option -$OPTARG requires an argument." >&2; usage; exit 2 ;;
+    esac
+done
+
+shift $((OPTIND - 1))
+
+if [ -z "$BARE_REPO_DIR" ]; then
+    echo "Bare repository directory is not specified." >&2
+    usage
+    exit 2
+fi
+
+GIT_REPO_URL="$1"
+WORKSPACE="$2"
+
+if [ -z "$GIT_REPO_URL" ]; then
+    echo "Git repository URL is required." >&2
+    usage
+    exit 2
+fi
+
+if [ -z "$WORKSPACE" ]; then
+    WORKSPACE="."
+fi
+
+if [ ! -d "$WORKSPACE" ]; then
+    mkdir -p $WORKSPACE
+fi
+
+git clone --bare ${GIT_REPO_URL} $WORKSPACE/$BARE_REPO_DIR && echo "gitdir: $BARE_REPO_DIR" > $WORKSPACE/.git && git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"

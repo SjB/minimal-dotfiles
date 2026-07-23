@@ -56,6 +56,8 @@ if status is-interactive
 
     command -q lazygit && alias lg lazygit
 
+    command -q zero.js && alias zero "zero.js"
+
     if command -q nvim
         set -gx EDITOR nvim
     else if command -qv vim
