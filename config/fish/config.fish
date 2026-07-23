@@ -60,6 +60,7 @@ if status is-interactive
 
     if command -q nvim
         set -gx EDITOR nvim
+        alias neogit "nvim +Neogit"
     else if command -qv vim
         set -gx EDITOR vim
     end 
