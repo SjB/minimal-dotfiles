@@ -1,3 +1,7 @@
+vim.pack.add({
+    { src = 'https://github.com/folke/which-key.nvim' },
+})
+
 require('which-key').setup({
     icons = {
         -- set icon mappings to true if you have a Nerd Font

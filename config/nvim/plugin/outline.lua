@@ -1,3 +1,7 @@
+vim.pack.add({
+    { src = 'https://github.com/hedyhli/outline.nvim' },
+})
+
 require('outline').setup({
     symbol_folding = {
         -- Unfold entire symbol tree by default with false, otherwise enter a

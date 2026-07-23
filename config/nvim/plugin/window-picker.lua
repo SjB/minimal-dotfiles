@@ -1,3 +1,6 @@
+vim.pack.add({
+    { src = 'https://github.com/ten3roberts/window-picker.nvim' },
+})
 
 require('window-picker').setup({
     -- Default keys to annotate, keys will be used in order. The default uses the

@@ -1,3 +1,7 @@
+vim.pack.add({
+    { src = 'https://github.com/akinsho/toggleterm.nvim' },
+})
+
 require("toggleterm").setup({
     -- highlights = require("rose-pine.plugins.toggleterm"),
     size = 20,

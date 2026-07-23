@@ -1,3 +1,13 @@
+vim.pack.add({
+    { src = 'https://github.com/williamboman/mason-lspconfig.nvim' },
+    { src = 'https://github.com/williamboman/mason.nvim' },
+    { src = 'https://github.com/neovim/nvim-lspconfig' },
+    { src = 'https://github.com/rcarriga/nvim-dap-ui' },
+    { src = 'https://github.com/mfussenegger/nvim-dap' },
+    { src = 'https://github.com/jay-babu/mason-nvim-dap.nvim' },
+    { src = 'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim' },
+})
+
 vim.keymap.set("i", "<C-.>", function()
     if not vim.lsp.inline_completion.get() then
         return "<C-.>"

@@ -1,3 +1,7 @@
+vim.pack.add({
+    { src = 'https://github.com/SjB/meow.review.nvim', version = 'fix-invalid-buffer-id' },
+})
+
 require("meow.review").setup({
 -- Your custom configuration goes here
 })

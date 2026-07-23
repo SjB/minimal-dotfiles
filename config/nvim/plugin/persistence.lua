@@ -1,3 +1,7 @@
+vim.pack.add({
+    { src = 'https://github.com/folke/persistence.nvim' },
+})
+
 require("persistence").setup({
   dir = vim.fn.expand(vim.fn.stdpath("state") .. "/sessions/"), -- directory where session files are saved
   options = { "buffers", "curdir", "tabpages", "winsize" }, -- sessionoptions used when saving sessions

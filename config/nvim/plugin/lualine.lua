@@ -1,3 +1,7 @@
+vim.pack.add({
+    { src = 'https://github.com/nvim-lualine/lualine.nvim' },
+})
+
 local function truncate_branch_name(branch)
     if not branch or branch == "" then
         return ""

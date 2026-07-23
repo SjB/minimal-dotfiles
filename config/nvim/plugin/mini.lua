@@ -1,3 +1,17 @@
+vim.pack.add({
+    { src = 'https://github.com/nvim-mini/mini.ai' },
+    { src = 'https://github.com/nvim-mini/mini.align' },
+    { src = 'https://github.com/nvim-mini/mini.bracketed' },
+    { src = 'https://github.com/nvim-mini/mini.extra' },
+    { src = 'https://github.com/nvim-mini/mini.files' },
+    { src = 'https://github.com/nvim-mini/mini.hipatterns' },
+    { src = 'https://github.com/nvim-mini/mini.move' },
+    { src = 'https://github.com/nvim-mini/mini.operators' },
+    { src = 'https://github.com/nvim-mini/mini.sessions' },
+    { src = 'https://github.com/nvim-mini/mini.splitjoin' },
+    { src = 'https://github.com/nvim-mini/mini.surround' },
+})
+
 local MiniExtra = require('mini.extra')
 local ai = require('mini.ai')
 local spec_treesitter = ai.gen_spec.treesitter

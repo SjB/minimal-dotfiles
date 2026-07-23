@@ -1,3 +1,12 @@
+vim.pack.add({
+    { src = 'https://github.com/nvim-treesitter/nvim-treesitter', version = 'main' },
+    { src = 'https://github.com/nvim-treesitter/nvim-treesitter-context' },
+    { src = 'https://github.com/nvim-treesitter/nvim-treesitter-context' },
+    { src = 'https://github.com/nvim-treesitter/nvim-treesitter-textobjects', version = 'main' },
+    { src = 'https://github.com/romus204/tree-sitter-manager.nvim' },
+    { src = 'https://github.com/JoosepAlviste/nvim-ts-context-commentstring' },
+})
+
 require("tree-sitter-manager").setup({
     -- Default Options
     -- ensure_installed = {}, -- list of parsers to install at the start of a neovim session
