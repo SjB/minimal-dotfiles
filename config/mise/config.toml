@@ -34,7 +34,7 @@ fzf = "latest"
 rust = "latest"
 tree-sitter = "latest"
 worktrunk = "latest"
-
+jq = "latest"
 
 [tasks.setup_pi]
 run = [
@@ -51,4 +51,3 @@ run = [
     'npx skills add SjB/skills',
     'npx skills add mattpocock/skills'	
 ]
-

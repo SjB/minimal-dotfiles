@@ -56,26 +56,13 @@ require('blink.cmp').setup({
                 per_filetype = {
                     org = {'orgmode'}
                 },
-                default = { 'orgmode', 'lsp', 'copilot', 'snippets', 'path', 'omni', 'buffer', 'codecompanion', 'markdown' },
+                default = { 'orgmode', 'lsp', 'snippets', 'path', 'omni', 'buffer', 'markdown' },
                 -- default = { 'orgmode', 'lsp', 'snippets', 'path', 'omni', 'buffer', 'codecompanion', 'markdown' },
                 providers = {
-                    codecompanion = {
-                        name = "CodeCompanion" ,
-                        module = "codecompanion.providers.completion.blink",
-                        enabled = true,
-                        score_offset = 100,
-                        async = true,
-                    },
                     orgmode = {
                         name = 'Orgmode',
                         module = 'orgmode.org.autocompletion.blink',
                         fallbacks = { 'buffer' },
-                    },
-                    copilot = {
-                        name = 'copilot',
-                        module = 'blink-copilot',
-                        score_offset = 100,
-                        async = true,
                     },
                     markdown = {
                         name = 'RenderMarkdown',
