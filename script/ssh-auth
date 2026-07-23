@@ -1,0 +1,3 @@
+#!/bin/sh
+
+echo export SSH_AUTH_SOCK=$(fd 's.*sshd*' ~/.ssh)
