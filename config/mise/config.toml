@@ -35,6 +35,7 @@ rust = "latest"
 tree-sitter = "latest"
 worktrunk = "latest"
 jq = "latest"
+tmux = "latest"
 
 [tasks.setup_pi]
 run = [

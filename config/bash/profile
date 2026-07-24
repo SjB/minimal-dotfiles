@@ -29,7 +29,8 @@ if [ -z "$SSH_CONNECTION" ]; then
 fi 
 
 # Create a predictable symlink pointing to the current SSH auth socket
-if [ -n "$SSH_AUTH_SOCK" ] && [ "$SSH_AUTH_SOCK" != "$HOME/.ssh/ssh_auth_sock" ]; then
-    rm -f "$HOME/.ssh/ssh_auth_sock"
-    ln -sf "$SSH_AUTH_SOCK" "$HOME/.ssh/ssh_auth_sock"
+auth_sock="$HOME/.ssh/ssh_auth_sock"
+if [ -n "$SSH_AUTH_SOCK" ] && [ "$SSH_AUTH_SOCK" != "$auth_sock" ]; then
+    mkdir -p "$HOME/.ssh"
+    ln -sf "$SSH_AUTH_SOCK" "$auth_sock"
 fi

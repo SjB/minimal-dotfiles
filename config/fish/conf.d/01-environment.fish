@@ -5,5 +5,7 @@ set -gx npm_config_prefix "$HOME/.local"
 
 if command -q nvim 
     set -gx EDITOR nvim
-fi
+end
+
 set -gx VISUAL $EDITOR
+
