@@ -12,35 +12,8 @@ if status is-interactive
     fish_config prompt choose default
     fish_hybrid_key_bindings
 
-    fish_add_path "$HOME/.local/bin"
-    fish_add_path "$HOME/.cargo/bin"
-
-    set -gx npm_config_prefix "$HOME/.local"
-
-    if command -q mise
-        mise activate fish | source
-    end
-
-    if command -q direnv
-        direnv hook fish | source
-    end
-
-    if command -q zoxide;
-        zoxide init fish | source
-    end
-
-    if command -q fzf
-       fzf --fish | source
-    end
-
-    if command -q jj
-        jj util completion fish | source
-    end
-
-    # fish_config theme choose "kanagawa"
-    # fish_config theme choose "Dracula"
-
     command -q nmcli && alias nmlist "nmcli device wifi list"
+
     if command -q tree 
         alias tree "tree -L 3 -a -I '.git' --charset X "
         alias dtree "tree -L 3 -a -d -I '.git' --charset X "
@@ -53,17 +26,15 @@ if status is-interactive
 
     command -q fabric && alias ai "fabric -p \$(fabric-ai -l | fzf)"
     command -q xdg-open && alias o "xdg-open"
-
     command -q lazygit && alias lg lazygit
+    command -q zero.js && alias zero 'zero.js'
 
-    command -q zero.js && alias zero "zero.js"
-
-    if command -q nvim
-        set -gx EDITOR nvim
-        alias neogit "nvim +Neogit"
-    else if command -qv vim
-        set -gx EDITOR vim
-    end 
+    if command -q nvim 
+        alias oo "cd $SECOND_BRAIN"
+        alias on "nvim '+Obsidian new'"
+        alias os "nvim '+Obsidian search'"
+        alias mini "NVIM_APPNAME=mini.nvim nvim"
+    end
 
     command -q jj && alias rev "jj log -G -T 'commit_id.short(8)'"
 
@@ -77,25 +48,22 @@ if status is-interactive
         alias wtr "wt remove @"
     end
 
-    if command -q opencode
+    if command -q /usr/bin/opencode
         alias oc "opencode"
     end
 
-    if command -q bat
-        alias cat="bat"
-    end
-
     # Commands to run in interactive sessions can go here
-    if command -q eza 
-        alias ll="eza -l -g --icons"
-        alias ls="eza -al --color=always --group-directories-first"
+    if command -q eza
+        alias ll "eza -l -g --icons"
+        alias ls "eza -al --color=always --group-directories-first"
     end
 
-    if command -q git
-        alias g=git
-    end
+    command -q bat && alias cat "bat"
+    command -q git && alias g git
 
-    set -gx VISUAL $EDITOR
+    if command -q jj
+        /usr/bin/jj util completion fish | source
+    end
 
     # NVM
     function __check_nvm --on-variable PWD --description 'Do nvm stuff'

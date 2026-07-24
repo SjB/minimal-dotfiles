@@ -1,0 +1,35 @@
+append_path () {
+      case ":$PATH:" in
+          *:"$1":*)
+              ;;
+          *)
+              PATH="${PATH:+$PATH:}$1"
+      esac
+}
+
+append_path "$HOME/.local/bin"
+append_path "$HOME/.cargo/bin"
+
+export PATH
+
+if [ test -x $(command -v mise) ]; then 
+    eval "$(mise activate bash)"
+fi
+
+if [ test -x $(command -v zoxide) ]; then 
+    eval "$(zoxide init bash)"
+fi
+
+if [ test -x $(command -v fzf) ]; then 
+    eval "$(fzf --bash)"
+fi
+
+if [ -z "$SSH_CONNECTION" ]; then
+      export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
+fi 
+
+# Create a predictable symlink pointing to the current SSH auth socket
+if [ -n "$SSH_AUTH_SOCK" ] && [ "$SSH_AUTH_SOCK" != "$HOME/.ssh/ssh_auth_sock" ]; then
+    rm -f "$HOME/.ssh/ssh_auth_sock"
+    ln -sf "$SSH_AUTH_SOCK" "$HOME/.ssh/ssh_auth_sock"
+fi

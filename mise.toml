@@ -13,17 +13,15 @@ dotfiles.default_mode = "symlink"
 "~/.pi/agents/AGENTS.md" = "config/agents/AGENTS.md"
 "~/.config/nvim/" = { source = "config/nvim", mode = "symlink-each" }
 "~/.config/opencode" = { source = "config/opencode", mode = "symlink-each" }
-"~/.config/fish/config.fish" = "config/fish/config.fish"
+"~/.config/fish" = { source = "config/fish", mode = "symlink-each" }
 "~/.config/herdr/config.toml" = "config/herdr/config.toml"
 "~/.config/git/config" = "config/git/config"
 "~/.config/git/local" = { source = "templates/git.tmpl", mode = "template", template = "tera" }
-"~/.bash_profile/mise" = { block = 'eval "$(mise activate bash)"' }
-"~/.bash_profile/zoxide" = { block = 'eval "$(zoxide init bash)"' }
-"~/.bash_profile/fzf" = { block = 'eval "$(fzf --bash)"' }
 "~/.bash_aliases" = { source = "config/bash/aliases", mode = "symlink" }
+"~/.profile" = { source = "config/bash/profile", mode = "symlink" }
 "~/.config/zero/config.json" = { source = "config/zero", mode =  "copy" }
 "~/.config/worktrunk/config.toml" = { source = "config/worktrunk/config.toml", mode = "symlink" }
-
+"~/.config/tmux" = { source = "config/tmux", mode = "symlink-each" }
 "~/.local/bin/tmux-open" = { source = "script/tmux-open", mode = "symlink" }
 "~/.local/bin/ci" = { source = "script/ci", mode = "symlink" }
 "~/.local/bin/n" = { source = "script/n", mode = "symlink" }
