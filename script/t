@@ -1,0 +1,39 @@
+#!/bin/sh
+# determine if the tmux server is running
+if [ "$TMUX" ]; then
+    FZF="fzf-tmux"
+else
+    FZF="fzf"
+fi
+
+if [ -z "$1" ]; then
+    ZOXIDE_RESULT=$(zoxide query -l | $FZF --reverse)
+elif [ x"." == x"$1" ]; then
+    ZOXIDE_RESULT=$PWD
+else
+    ZOXIDE_RESULT=$(zoxide query $1)
+fi
+
+if [ -z "$ZOXIDE_RESULT" ]; then
+    exit 0
+fi
+
+FOLDER=$(echo $ZOXIDE_RESULT | awk 'BEGIN{FS="/"} { print $(NF-1)"_"$NF }' | tr '. ' '_')
+SESSION=$(tmux list-sessions | grep -m 1 $FOLDER | awk -F: '{print $1}')
+
+if [ -z "$TMUX" ]; then
+    if [ -z "$SESSION" ]; then
+        cd $ZOXIDE_RESULT
+        tmux new-session -s $FOLDER
+    else
+        tmux attach -t $SESSION
+    fi
+else
+    if [ -z "$SESSION" ]; then
+       cd $ZOXIDE_RESULT
+       tmux new-session -d -s $FOLDER
+       tmux switch-client -t $FOLDER
+    else
+        tmux switch-client -t $SESSION
+    fi
+fi
