@@ -1,6 +1,5 @@
 [env]
-USER_FULLNAME = "Steve Beulac"
-USER_EMAIL = "steve@beaulac.me"
+_.file = '~/.config/mise/env'
 
 [settings]
 experimental = true
@@ -51,4 +50,18 @@ run = [
 run = [
     'npx skills add SjB/skills',
     'npx skills add mattpocock/skills'	
+]
+
+[tasks.light]
+run = [
+    'ln -snf $DOTFILES_DIR/config/themes/nvim/light-theme.lua ~/.config/nvim/plugin/theme.lua',
+    'ln -snf $DOTFILES_DIR/config/themes/tmux/light.theme ~/.config/tmux/theme',
+    'tmux source-file ~/.config/tmux/tmux.conf && tmux refresh-client -S',
+]
+
+[tasks.dark]
+run = [
+    'ln -snf $DOTFILES_DIR/config/themes/nvim/dark-theme.lua ~/.config/nvim/plugin/theme.lua',
+    'ln -snf $DOTFILES_DIR/config/themes/tmux/dark.theme ~/.config/tmux/theme',
+    'tmux source-file ~/.config/tmux/tmux.conf && tmux refresh-client -S',
 ]

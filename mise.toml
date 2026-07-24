@@ -1,6 +1,8 @@
 [vars]
-USER_FULLNAME = "Steve Beulac"
+USER_FULLNAME = "Steve Beaulac"
 USER_EMAIL = "steve@beaulac.me"
+DOTFILES_DIR = "{{config_root}}"
+SECOND_BRAIN = "~/Documents/sjb-brain"
 
 [settings]
 dotfiles.root = "{{config_root}}"
@@ -29,6 +31,7 @@ dotfiles.default_mode = "symlink"
 "~/.local/bin/t" = { source = "script/t", mode = "symlink" }
 "~/.local/bin/git-bare-clone" = { source = "script/git-bare-clone", mode = "symlink" }
 "~/.local/bin/ssh-auth" = { source = "script/ssh-auth", mode = "symlink" }
+"~/.config/mise/env" = { source = "templates/dotenv.tmpl", mode = "template", template = "tera" }
 
 [bootstrap.mise_shell_activate] # mise activation in shell startup files
 zprofile = "shims"
@@ -43,5 +46,5 @@ run = [
 ]
 
 [tasks.bootstrap]
-depends = ['setup_shells']
+depends = ['setup_shells', 'dark']
 

@@ -1,28 +1,29 @@
-color_bg0="#282828"
-color_bg1="#3c3836"
-color_bg2="#d4be98"
-color_fg0="#d4be98"
-color_fg1="#d8a657"
+color_bg0="#1a1b26"
+color_bg1="#32344a"
+color_bg2="#787c99"
+color_fg0="#a9b1d6"
+color_fg1="#e0af68"
 
-color_status_fg="#7daea3"
-color_status_bg="#3c3836"
+color_status_fg="#7aa2f7"
+color_status_bg="#32344a"
 
-color_selected_fg="#ebdbb2"
-color_selected_bg="#d65d0e"
+color_selected_fg="#c0caf5"
+color_selected_bg="#7aa2f7"
 
-color_highlight_fg="#a9b665"
-color_highlight_bg="#282828"
+color_highlight_fg="#9ece6a"
+color_highlight_bg="#1a1b26"
 
-color_current_fg="#ea6962"
-color_current_bg="#282828"
+color_current_fg="#f7768e"
+color_current_bg="#1a1b26"
 
-color_check_fg="#d3869b"
+color_check_fg="#ad8ee6"
 
-pane_border_fg="#d4be98"
-pane_border_selected_fg="#a9b665"
+pane_border_fg="#a9b1d6"
+pane_border_selected_fg="#9ece6a"
 
 set -g @prefix_highlight_fg "${color_highlight_fg}"
 set -g @prefix_highlight_bg "${color_highlight_bg}"
+set -g @bg "${color_bg0}"
 
 # Status bar settings
 set -g status-style "bg=${color_bg0},fg=${color_fg0}"
@@ -31,6 +32,9 @@ set -g status-bg "${color_bg0}"
 set -g status-justify "left"
 #set -g status-left-length "100"
 set -g status-right-length "100"
+
+set -g window-style "fg=${color_fg0},bg=${color_bg1}"
+set -g window-active-style "fg=${color_fg0},bg=${color_bg0}"
 
 # Messages
 set -g message-style "fg=${color_selected_fg},bg=${color_selected_bg}"
@@ -60,5 +64,4 @@ set -g mode-style "fg=${color_highlight_fg} bg=${color_bg1} bold"
 
 # Statusline - left side (empty)
 set -g status-left ""
-
 

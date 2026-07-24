@@ -1,0 +1,67 @@
+color_bg0="#faf4ed"
+color_bg1="#f2e9e1"
+color_bg2="#575279"
+color_fg0="#575279"
+color_fg1="#ea9d34"
+
+color_status_fg="#56949f"
+color_status_bg="#f2e9e1"
+
+color_selected_fg="#575279"
+color_selected_bg="#dfdad9"
+
+color_highlight_fg="#286983"
+color_highlight_bg="#faf4ed"
+
+color_current_fg="#b4637a"
+color_current_bg="#faf4ed"
+
+color_check_fg="#907aa9"
+
+pane_border_fg="#575279"
+pane_border_selected_fg="#286983"
+
+set -g @prefix_highlight_fg "${color_highlight_fg}"
+set -g @prefix_highlight_bg "${color_highlight_bg}"
+
+# Status bar settings
+set -g status-style "bg=${color_bg0},fg=${color_fg0}"
+set -g status "on"
+set -g status-bg "${color_bg0}"
+set -g status-justify "left"
+#set -g status-left-length "100"
+set -g status-right-length "100"
+
+set -g window-style "fg=${color_fg0},bg=${color_bg1}"
+set -g window-active-style "fg=${color_fg0},bg=${color_bg0}"
+
+# Messages
+set -g message-style "fg=${color_selected_fg},bg=${color_selected_bg}"
+set -g message-command-style "fg=${color_selected_fg},bg=${color_selected_bg}"
+
+# Panes
+set -g pane-border-style "fg=${pane_border_fg}"
+set -g pane-active-border-style "fg=${pane_border_selected_fg}"
+
+# Windows
+set -g window-status-activity-style "fg=${color_fg0},bg=${color_bg0},none"
+set -g window-status-separator ""
+set -g window-status-style "fg=${color_fg0},bg=${color_bg0},none"
+
+# Statusline - current window
+set -g window-status-current-format "#[fg=${color_current_fg},bg=${color_current_bg}]#I: #[fg=${color_check_fg},bg=${color_current_bg}](✓) #[fg=${color_current_fg},bg=${color_current_bg}]#W "
+
+# Statusline - other windows
+set -g window-status-format "#[fg=${color_highlight_fg},bg=${color_highlight_bg}]#I: #[fg=${color_fg0},bg=${color_highlight_bg}]#W "
+
+# Statusline - right side
+set -g status-right "#[fg=${color_fg1},bg=${color_bg0},nobold,nounderscore,noitalics]%Y-%m-%d %H:%M #[fg=${color_fg0},bg=${color_highlight_fg},nobold,nounderscore,noitalics] #[fg=${color_fg0},bg=${color_bg1}] #(echo '#{pane_current_path}' | rev | cut -d'/' -f-2 | rev) #[fg=${color_fg0},bg=${color_current_fg},nobold,nounderscore,noitalics] #[fg=${color_fg0},bg=${color_bg1}] #S "
+
+# Modes
+set -g clock-mode-colour "${color_status_fg}"
+set -g mode-style "fg=${color_highlight_fg} bg=${color_bg1} bold"
+
+# Statusline - left side (empty)
+set -g status-left ""
+
+
