@@ -25,6 +25,8 @@ dotfiles.default_mode = "symlink"
 "~/.local/bin/tmux-open" = { source = "script/tmux-open", mode = "symlink" }
 "~/.local/bin/ci" = { source = "script/ci", mode = "symlink" }
 "~/.local/bin/n" = { source = "script/n", mode = "symlink" }
+"~/.local/bin/s" = { source = "script/s", mode = "symlink" }
+"~/.local/bin/t" = { source = "script/t", mode = "symlink" }
 "~/.local/bin/git-bare-clone" = { source = "script/git-bare-clone", mode = "symlink" }
 "~/.local/bin/ssh-auth" = { source = "script/ssh-auth", mode = "symlink" }
 
