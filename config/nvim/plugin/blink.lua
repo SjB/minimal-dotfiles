@@ -54,11 +54,18 @@ require('blink.cmp').setup({
             signature = { enabled = true },
             sources = {
                 per_filetype = {
-                    org = {'orgmode'}
+                    ["org"] = {'orgmode'},
+                    ["pi-chat-prompt"] = { "pi" },
                 },
                 default = { 'orgmode', 'lsp', 'snippets', 'path', 'omni', 'buffer', 'markdown' },
                 -- default = { 'orgmode', 'lsp', 'snippets', 'path', 'omni', 'buffer', 'codecompanion', 'markdown' },
                 providers = {
+                    pi = { 
+                        name = "Pi", 
+                        module = "pi.completion.blink",
+                        enabled = true,
+                        score_offset = 100,
+                    },
                     orgmode = {
                         name = 'Orgmode',
                         module = 'orgmode.org.autocompletion.blink',
