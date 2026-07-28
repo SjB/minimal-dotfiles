@@ -56,12 +56,12 @@ run = [
 run = [
     'ln -snf $DOTFILES_DIR/config/themes/nvim/light-theme.lua ~/.config/nvim/plugin/theme.lua',
     'ln -snf $DOTFILES_DIR/config/themes/tmux/light.theme ~/.config/tmux/theme',
-    'tmux source-file ~/.config/tmux/tmux.conf && tmux refresh-client -S',
+    'if [ -n "$TMUX" ]; then tmux source-file ~/.config/tmux/tmux.conf && tmux refresh-client -S; fi',
 ]
 
 [tasks.dark]
 run = [
     'ln -snf $DOTFILES_DIR/config/themes/nvim/dark-theme.lua ~/.config/nvim/plugin/theme.lua',
     'ln -snf $DOTFILES_DIR/config/themes/tmux/dark.theme ~/.config/tmux/theme',
-    'tmux source-file ~/.config/tmux/tmux.conf && tmux refresh-client -S',
+    'if [ -n "$TMUX" ]; then tmux source-file ~/.config/tmux/tmux.conf && tmux refresh-client -S; fi',
 ]
