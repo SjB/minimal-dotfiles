@@ -195,3 +195,6 @@ ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[credential "http://gitea.sagacity.ca"]
+	helper = 
+	helper = !tea login helper
