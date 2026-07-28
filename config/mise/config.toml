@@ -52,6 +52,13 @@ run = [
     'npx skills add mattpocock/skills'	
 ]
 
+[tasks.herdr_setup]
+run = [
+    'herdr plugin install devashish2203/herdr-worktrunk --yes',
+    'herdr plugin install qu8n/herdr-automatic-rename --yes',
+    'herdr plugin install den-tanui/herdr-zoxide --yes',
+]
+
 [tasks.light]
 run = [
     'ln -snf $DOTFILES_DIR/config/themes/nvim/light-theme.lua ~/.config/nvim/plugin/theme.lua',

@@ -34,3 +34,7 @@ if [ -n "$SSH_AUTH_SOCK" ] && [ "$SSH_AUTH_SOCK" != "$auth_sock" ]; then
     mkdir -p "$HOME/.ssh"
     ln -sf "$SSH_AUTH_SOCK" "$auth_sock"
 fi
+
+for _f in "$HOME"/.config/herdr/plugins/github/herdr-automatic-rename-*/shell/hook.bash; do
+  [ -r "$_f" ] && { source "$_f"; break; }
+done
