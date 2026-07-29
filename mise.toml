@@ -20,7 +20,7 @@ dotfiles.default_mode = "symlink"
 "~/.config/git/config" = "config/git/config"
 "~/.config/git/local" = { source = "templates/git.tmpl", mode = "template", template = "tera" }
 "~/.bash_aliases" = { source = "config/bash/aliases", mode = "symlink" }
-"~/.profile" = { source = "config/bash/profile", mode = "symlink" }
+"~/.bashrc" = { source = "config/bash/profile", mode = "symlink" }
 "~/.config/zero/config.json" = { source = "config/zero", mode =  "copy" }
 "~/.config/worktrunk/config.toml" = { source = "config/worktrunk/config.toml", mode = "symlink" }
 "~/.config/tmux" = { source = "config/tmux", mode = "symlink-each" }

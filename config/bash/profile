@@ -12,15 +12,15 @@ append_path "$HOME/.cargo/bin"
 
 export PATH
 
-if [ test -x $(command -v mise) ]; then 
+if [ -x $(command -v mise) ]; then 
     eval "$(mise activate bash)"
 fi
 
-if [ test -x $(command -v zoxide) ]; then 
+if [ -x $(command -v zoxide) ]; then 
     eval "$(zoxide init bash)"
 fi
 
-if [ test -x $(command -v fzf) ]; then 
+if [ -x $(command -v fzf) ]; then 
     eval "$(fzf --bash)"
 fi
 
