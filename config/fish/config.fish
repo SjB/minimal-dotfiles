@@ -14,6 +14,10 @@ if status is-interactive
 
     command -q nmcli && alias nmlist "nmcli device wifi list"
 
+    if command -q bat
+        set -gx PAGER "bat"
+    end
+
     if command -q tree 
         alias tree "tree -L 3 -a -I '.git' --charset X "
         alias dtree "tree -L 3 -a -d -I '.git' --charset X "

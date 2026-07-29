@@ -11,6 +11,9 @@ append_path "$HOME/.local/bin"
 append_path "$HOME/.cargo/bin"
 
 export PATH
+if [ -x $(command -v bat) ]; then
+    export PAGER="bat"
+fi 
 
 if [ -x $(command -v mise) ]; then 
     eval "$(mise activate bash)"
