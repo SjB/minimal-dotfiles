@@ -29,6 +29,8 @@ if status is-interactive
     command -q lazygit && alias lg lazygit
     command -q zero.js && alias zero 'zero.js'
 
+    alias dot "cd $DOTFILES_DIR"
+
     if command -q nvim 
         alias oo "cd $SECOND_BRAIN"
         alias on "nvim '+Obsidian new'"
