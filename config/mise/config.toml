@@ -43,8 +43,7 @@ run = [
     'pi install npm:pi-native-search',
     'pi install npm:@tintinweb/pi-subagents',
     'pi install npm:context-mode',
-    'pi install npm:@gotgenes/pi-permission-system',
-    'test -x /usr/bin/pass && /usr/bin/pass show config/pi/auth.json > ~/.pi/agent/auth.json'
+    'pi install npm:@gotgenes/pi-permission-system'
 ]
 
 [tasks.skills]

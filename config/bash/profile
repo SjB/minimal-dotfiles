@@ -38,3 +38,5 @@ fi
 for _f in "$HOME"/.config/herdr/plugins/github/herdr-automatic-rename-*/shell/hook.bash; do
   [ -r "$_f" ] && { source "$_f"; break; }
 done
+
+[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
