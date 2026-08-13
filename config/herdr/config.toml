@@ -13,7 +13,6 @@ pane_history = true
 
 [theme]
 name = "gruvbox"
-auto_switch = true
 
 [keys]
 prefix = "ctrl+space"
