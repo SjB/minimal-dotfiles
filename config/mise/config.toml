@@ -36,6 +36,7 @@ worktrunk = "latest"
 jq = "latest"
 tmux = "latest"
 eza = "latest"
+dua = "latest"
 
 [tasks.setup_pi]
 run = [
