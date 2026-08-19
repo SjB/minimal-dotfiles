@@ -45,9 +45,9 @@ run = [
     'pi install npm:@tintinweb/pi-subagents',
     'pi install npm:context-mode',
     'pi install npm:@ff-labs/pi-fff',
-    'pi install npm:@narumitw/pi-plan-mode',
     'pi install npm:@dietrichgebert/ponytail',
     'pi install npm:@gotgenes/pi-permission-system'
+    'pi install npm:@plannotator/pi-extension',
 ]
 
 [tasks.skills]
