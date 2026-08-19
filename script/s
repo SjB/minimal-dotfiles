@@ -1,6 +1,6 @@
 #!/bin/sh
 if [ "$TMUX" ]; then
-    FZF="fzf-tmux"
+    FZF="fzf --popup=bottom"
 else
     FZF="fzf"
 fi
