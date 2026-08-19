@@ -56,7 +56,7 @@ set -g window-status-current-format "#[fg=${color_current_fg},bg=${color_current
 set -g window-status-format "#[fg=${color_highlight_fg},bg=${color_highlight_bg}]#I: #[fg=${color_fg0},bg=${color_highlight_bg}]#W "
 
 # Statusline - right side
-set -g status-right "#[fg=${color_fg1},bg=${color_bg0},nobold,nounderscore,noitalics]%Y-%m-%d %H:%M #[fg=${color_fg0},bg=${color_highlight_fg},nobold,nounderscore,noitalics] #[fg=${color_fg0},bg=${color_bg1}] #(echo '#{pane_current_path}' | rev | cut -d'/' -f-2 | rev) #[fg=${color_fg0},bg=${color_current_fg},nobold,nounderscore,noitalics] #[fg=${color_fg0},bg=${color_bg1}] #S "
+set -g status-right "#[fg=${color_fg1},bg=${color_bg0},nobold,nounderscore,noitalics]%Y-%m-%d %H:%M #[fg=${color_fg0},bg=${color_highlight_fg},nobold,nounderscore,noitalics] #[fg=${color_fg0},bg=${color_bg1}] #(echo '#{pane_current_path}' | rev | cut -d'/' -f-2 | rev) #[fg=${color_fg0},bg=${color_current_fg},nobold,nounderscore,noitalics] #[fg=${color_fg0},bg=${color_bg1}] #S #[fg=${color_fg0},bg=${color_status_fg}] #[fg=${color_fg0},bg=${color_bg1}] #h"
 
 # Modes
 set -g clock-mode-colour "${color_status_fg}"
