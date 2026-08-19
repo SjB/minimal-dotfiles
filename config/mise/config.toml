@@ -47,8 +47,8 @@ run = [
     'pi install npm:context-mode',
     'pi install npm:@ff-labs/pi-fff',
     'pi install npm:@dietrichgebert/ponytail',
-    'pi install npm:@gotgenes/pi-permission-system'
     'pi install npm:@plannotator/pi-extension',
+    'pi install npm:@gotgenes/pi-permission-system'
 ]
 
 [tasks.skills]
