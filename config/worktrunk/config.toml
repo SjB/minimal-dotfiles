@@ -1,4 +1,5 @@
 worktree-path = "{{ repo_path }}/../wt-{{ branch | sanitize }}"
+skip-shell-integration-prompt = true
 
 [list]
 summary = true
@@ -11,4 +12,6 @@ misetrust = "mise trust"
 
 [post-switch]
 tmux = "[ -n \"$TMUX\" ] && tmux rename-window {{ branch | sanitize }}"
+
+[projects]
 
