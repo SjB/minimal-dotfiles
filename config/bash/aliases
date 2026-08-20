@@ -6,4 +6,6 @@ alias ll="eza -l -g --icons"
 alias ls="eza -al --color=always --group-directories-first"
 alias g="git"
 alias neogit="nvim +Neogit"
+alias zdiff="nvim +Zdiff"
+alias review="nvim +'Zdiff master'"
 

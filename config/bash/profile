@@ -27,6 +27,10 @@ if [ -x $(command -v fzf) ]; then
     eval "$(fzf --bash)"
 fi
 
+if [ -x $(command -v wt) ]; then 
+    eval "$(command wt config shell init bash)"; 
+fi
+
 if [ -z "$SSH_CONNECTION" ]; then
       export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
 fi 
@@ -43,3 +47,4 @@ for _f in "$HOME"/.config/herdr/plugins/github/herdr-automatic-rename-*/shell/ho
 done
 
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
+
