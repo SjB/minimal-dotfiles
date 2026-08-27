@@ -63,6 +63,7 @@ run = [
     'herdr plugin install devashish2203/herdr-worktrunk --yes',
     'herdr plugin install qu8n/herdr-automatic-rename --yes',
     'herdr plugin install den-tanui/herdr-zoxide --yes',
+    'herdr plugin install plannotator/herdr-annotate --yes',
 ]
 
 [tasks.light]
