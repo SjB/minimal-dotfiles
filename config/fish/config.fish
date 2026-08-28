@@ -39,6 +39,7 @@ if status is-interactive
         alias oo "cd $SECOND_BRAIN"
         alias on "nvim '+Obsidian new'"
         alias os "nvim '+Obsidian search'"
+        alias ngit "nvim +Neogit"
         alias zdiff "nvim '+Zdiff'"
         alias review "nvim '+Zdiff origin/HEAD'"
         alias mini "NVIM_APPNAME=mini.nvim nvim"
