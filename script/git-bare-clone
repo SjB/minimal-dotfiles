@@ -6,7 +6,7 @@ Usage: git bare-clone [-d bare-repo-dir] [-h] <git-repo-url> [workspace]
 EOF
 }
 
-BARE_REPO_DIR="./.bare"
+BARE_REPO_DIR=".bare"
 while getopts ":d:h" opt; do
     case "$opt" in
         d) BARE_REPO_DIR="$OPTARG" ;;
