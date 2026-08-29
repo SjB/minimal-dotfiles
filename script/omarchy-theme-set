@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# omarchy:summary=Apply an Omarchy theme
+# omarchy:args=<theme-name>
+# omarchy:examples=omarchy theme list | omarchy theme set "Tokyo Night"
+
+if [[ -z $1 ]]; then
+  echo "Usage: omarchy-theme-set <theme-name>"
+  exit 1
+fi
+
+CURRENT_THEME_PATH="$HOME/.config/omarchy/current/theme"
+NEXT_THEME_PATH="$HOME/.config/omarchy/current/next-theme"
+USER_THEMES_PATH="$HOME/.config/omarchy/themes"
+OMARCHY_THEMES_PATH="${DOTFILES_DIR}/themes"
+
+THEME_NAME=$(echo "$1" | sed -E 's/<[^>]+>//g' | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+
+if [[ ! -d $OMARCHY_THEMES_PATH/$THEME_NAME ]] && [[ ! -d $USER_THEMES_PATH/$THEME_NAME ]]; then
+  echo "Theme '$THEME_NAME' does not exist"
+  exit 1
+fi
+
+# Setup clean next theme directory (for atomic theme config swapping)
+rm -rf "$NEXT_THEME_PATH"
+mkdir -p "$NEXT_THEME_PATH"
+
+# Copy official theme first, then overlay user customizations on top
+cp -r "$OMARCHY_THEMES_PATH/$THEME_NAME/"* "$NEXT_THEME_PATH/" 2>/dev/null
+cp -r "$USER_THEMES_PATH/$THEME_NAME/"* "$NEXT_THEME_PATH/" 2>/dev/null
+
+# Generate dynamic configs
+omarchy-theme-set-templates
+
+# Swap next theme in as current
+rm -rf "$CURRENT_THEME_PATH"
+mv "$NEXT_THEME_PATH" "$CURRENT_THEME_PATH"
+
+# Store theme name for reference
+echo "$THEME_NAME" >"$HOME/.config/omarchy/current/theme.name"
+
+omarchy-restart-btop
+omarchy-restart-tmux
+
+# Call hook on theme set
+omarchy-hook theme-set "$THEME_NAME" >/dev/null

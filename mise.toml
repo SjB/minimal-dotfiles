@@ -32,6 +32,12 @@ dotfiles.default_mode = "symlink"
 "~/.local/bin/git-bare-clone" = { source = "script/git-bare-clone", mode = "symlink" }
 "~/.local/bin/ssh-auth" = { source = "script/ssh-auth", mode = "symlink" }
 "~/.config/mise/env" = { source = "templates/dotenv.tmpl", mode = "template", template = "tera" }
+"~/.local/bin/omarchy-theme-set" = { source = "script/omarchy-theme-set", mode = "symlink" }
+"~/.local/bin/omarchy-theme-list" = { source = "script/omarchy-theme-list", mode = "symlink" }
+"~/.local/bin/omarchy-hook" = { source = "script/omarchy-hook", mode = "symlink" }
+"~/.local/bin/omarchy-set-templates" = { source = "script/omarchy-set-templates", mode = "symlink" }
+"~/.local/bin/omarchy-restart-tmux" = { source = "script/omarchy-restart-tmux", mode = "symlink" }
+"~/.local/bin/omarchy-restart-btop" = { source = "script/omarchy-restart-btop", mode = "symlink" }
 
 [bootstrap.mise_shell_activate] # mise activation in shell startup files
 zprofile = "shims"
