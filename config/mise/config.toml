@@ -63,7 +63,7 @@ run = [
     'npx skills add SjB/skills',
 ]
 
-[tasks.herdr_setup]
+[tasks.setup_herdr]
 run = [
     'herdr plugin install devashish2203/herdr-worktrunk --yes',
     'herdr plugin install qu8n/herdr-automatic-rename --yes',
@@ -71,7 +71,7 @@ run = [
     'herdr plugin install plannotator/herdr-annotate --yes',
 ]
 
-[tasks.tmux_setup]
+[tasks.setup_tmux]
 run = [
     'git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm',
 ]

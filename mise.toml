@@ -9,11 +9,14 @@ dotfiles.root = "{{config_root}}"
 dotfiles.default_mode = "symlink"
 
 [dotfiles]
+"~/.config/btop" = "config/btop"
+"~/.config/btop/themes/current.theme" = { source = "~/.config/omarchy/current/theme/btop.theme", mode = "symlink" }
 "~/.config/mise/config.toml" = "config/mise/config.toml"
 "~/.agents/AGENTS.md" = "config/agents/AGENTS.md"
 "~/.pi" = { source = "config/pi", mode = "symlink-each" }
 "~/.pi/agents/AGENTS.md" = "config/agents/AGENTS.md"
 "~/.config/nvim/" = { source = "config/nvim", mode = "symlink-each" }
+"~/.config/nvim/plugin/theme.lua" = { source = "~/.config/omarchy/current/theme/neovim-vimpack.lua", mode = "symlink" }
 "~/.config/opencode" = { source = "config/opencode", mode = "symlink-each" }
 "~/.config/fish" = { source = "config/fish", mode = "symlink-each" }
 "~/.config/herdr/config.toml" = "config/herdr/config.toml"
@@ -23,6 +26,7 @@ dotfiles.default_mode = "symlink"
 "~/.bashrc" = { source = "config/bash/profile", mode = "symlink" }
 "~/.config/zero/config.json" = { source = "config/zero", mode =  "copy" }
 "~/.config/worktrunk/config.toml" = { source = "config/worktrunk/config.toml", mode = "symlink" }
+"~/.config/tmux/theme" = { source = "~/.config/omarchy/current/theme/tmux", mode = "symlink" }
 "~/.config/tmux" = { source = "config/tmux", mode = "symlink-each" }
 "~/.local/bin/tmux-open" = { source = "script/tmux-open", mode = "symlink" }
 "~/.local/bin/ci" = { source = "script/ci", mode = "symlink" }
@@ -35,7 +39,7 @@ dotfiles.default_mode = "symlink"
 "~/.local/bin/omarchy-theme-set" = { source = "script/omarchy-theme-set", mode = "symlink" }
 "~/.local/bin/omarchy-theme-list" = { source = "script/omarchy-theme-list", mode = "symlink" }
 "~/.local/bin/omarchy-hook" = { source = "script/omarchy-hook", mode = "symlink" }
-"~/.local/bin/omarchy-set-templates" = { source = "script/omarchy-set-templates", mode = "symlink" }
+"~/.local/bin/omarchy-theme-set-templates" = { source = "script/omarchy-theme-set-templates", mode = "symlink" }
 "~/.local/bin/omarchy-restart-tmux" = { source = "script/omarchy-restart-tmux", mode = "symlink" }
 "~/.local/bin/omarchy-restart-btop" = { source = "script/omarchy-restart-btop", mode = "symlink" }
 
@@ -51,6 +55,9 @@ run = [
     'tmux run-shell ~/.config/tmux/plugins/tpm/bindings/install_plugins',
 ]
 
+[bootstrap.hooks.pre-packages]
+run = "test -d ~/.config/omarchy/current/theme || rsync -av config/omarchy/default/ ~/.config/omarchy/current/theme/ --mkpath"
+
 [tasks.bootstrap]
-depends = ['setup_shells', 'dark']
+depends = ['setup_shells', 'setup_tmux', 'setup_pi', 'setup_herdr', 'setup_tmux', 'skills', 'dark']
 

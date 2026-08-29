@@ -12,8 +12,9 @@ manage_ssh_config = true
 pane_history = true
 
 [theme]
-name = "gruvbox"
+name = "terminal"
 
+auto_switch = false
 [keys]
 prefix = "ctrl+space"
 
