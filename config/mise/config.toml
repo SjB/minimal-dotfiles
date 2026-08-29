@@ -60,8 +60,6 @@ run = [
 [tasks.skills]
 run = [
     'npx skills add SjB/skills',
-    'npx skills add mattpocock/skills',
-    'npx skills add ogulcancelik/herdr'
 ]
 
 [tasks.herdr_setup]
