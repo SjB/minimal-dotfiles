@@ -1,25 +1,27 @@
 {
-  "permission": {
-    "*": "ask",
-    "path": {
-      "./*": "allow",
-      "./.*": "allow",
-      "~/.ssh/*": "deny",
-      "*.env": "deny",
-      "*.env.*": "deny",
-      "*.env.example": "allow"
+    "permission": {
+        "*": "ask",
+        "path": {
+            "./*": "allow",
+            "../*": "allow",
+            "*.env": "deny",
+            "*.env.*": "deny",
+            "*.env.example": "allow"
+        },
+        "bash": {
+            "*": "ask",
+            "rm -rf *": "deny",
+            "sudo *": "ask"
+        },
+        "external_directory": {
+            "~/Projects/*": "ask",
+            "~/.ssh/*": "deny",
+            "/tmp/*": "allow",
+            "~/Documents/sjb-brain/*": "allow",
+            "*": "ask"
+        }
     },
-    "bash": {
-      "*": "ask",
-      "rm -rf *": "deny",
-      "sudo *": "ask"
-    },
-    "external_directory": {
-      "*": "deny",
-      "~/Documents/sjb-brain/*": "allow"
-    }
-  },
-  "debugLog": false,
-  "permissionReviewLog": true,
-  "yoloMode": true
+    "debugLog": false,
+    "permissionReviewLog": true,
+    "yoloMode": true
 }
