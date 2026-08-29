@@ -38,6 +38,12 @@ tmux = "latest"
 eza = "latest"
 dua = "latest"
 bat = "latest"
+"http:tea" = { 
+    version = "0.15.1", 
+    url = 'https://gitea.com/gitea/tea/releases/download/v{{ version }}/tea-{{ version }}-{{ os(macos="darwin", linux="linux") }}-{{ arch(x64="amd64", arm64="arm64") }}', 
+    bin = "tea", 
+    format = "raw" 
+}
 
 [tasks.setup_pi]
 run = [
