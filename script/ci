@@ -1,2 +1,2 @@
 #!/usr/bin/env -S /bin/sh
-exec pi --model opencode-go/mimo-v2.5 -p /skill:commit-staged
+exec pi --model opencode-go/glm-5.3-flash -p /skill:commit-staged
