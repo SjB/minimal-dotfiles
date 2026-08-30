@@ -1,5 +1,6 @@
 [env]
 _.file = '~/.config/mise/env'
+EDITOR = "nvim"
 
 [settings]
 experimental = true
