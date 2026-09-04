@@ -31,15 +31,14 @@ if [ -x $(command -v wt) ]; then
     eval "$(command wt config shell init bash)"; 
 fi
 
-if [ -z "$SSH_CONNECTION" ]; then
-      export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
-fi 
-
-# Create a predictable symlink pointing to the current SSH auth socket
-auth_sock="$HOME/.ssh/ssh_auth_sock"
-if [ -n "$SSH_AUTH_SOCK" ] && [ "$SSH_AUTH_SOCK" != "$auth_sock" ]; then
-    mkdir -p "$HOME/.ssh"
-    ln -sf "$SSH_AUTH_SOCK" "$auth_sock"
+if [ -n "$SSH_CONNECTION" ]; then
+    # Create a predictable symlink pointing to the current SSH auth socket
+    auth_sock="$HOME/.ssh/ssh_auth_sock"
+    if [ -n "$SSH_AUTH_SOCK" ] && [ "$SSH_AUTH_SOCK" != "$auth_sock" ]; then
+        mkdir -p "$HOME/.ssh" && ln -snf "$SSH_AUTH_SOCK" "$auth_sock"
+    fi
+else
+    export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 fi
 
 for _f in "$HOME"/.config/herdr/plugins/github/herdr-automatic-rename-*/shell/hook.bash; do
