@@ -9,8 +9,8 @@ if [[ -z $1 ]]; then
   exit 1
 fi
 
-CURRENT_THEME_PATH="$HOME/.config/omarchy/current/theme"
-NEXT_THEME_PATH="$HOME/.config/omarchy/current/next-theme"
+CURRENT_THEME_PATH="$HOME/.local/state/omarchy/current/theme"
+NEXT_THEME_PATH="$HOME/.local/state/omarchy/current/next-theme"
 USER_THEMES_PATH="$HOME/.config/omarchy/themes"
 OMARCHY_THEMES_PATH="${DOTFILES_DIR}/themes"
 
