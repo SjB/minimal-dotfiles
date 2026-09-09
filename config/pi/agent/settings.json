@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.81.1",
+  "lastChangelogVersion": "0.84.3",
   "theme": "dark",
   "defaultProvider": "opencode-go",
   "defaultModel": "deepseek-v4-flash",
@@ -9,6 +9,9 @@
     "npm:pi-native-search",
     "npm:@tintinweb/pi-subagents",
     "npm:context-mode",
-    "npm:@gotgenes/pi-permission-system"
+    "npm:@gotgenes/pi-permission-system",
+    "npm:@ff-labs/pi-fff",
+    "npm:@dietrichgebert/ponytail",
+    "npm:@plannotator/pi-extension"
   ]
 }
