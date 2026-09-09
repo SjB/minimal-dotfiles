@@ -1,0 +1,26 @@
+* {
+    background: #1a1b26;
+    foreground: #a9b1d6;
+    active-background: #9ece6a;
+    urgent-background: #f7768e;
+
+    normal-foreground: #e0af68;
+    normal-background: #1a1b26;
+
+    selected-foreground: #c0caf5;
+    selected-background: #7aa2f7;
+
+    seperator-color: #1a1b26;
+    border-color: #32344a;
+
+    prompt-color: #7aa2f7;
+    prompt-background-color: #32344a;
+
+    window-border-size: 1px;
+    window-border-radius: 8px;
+
+    background-color: @background;
+    text-color: @foreground;
+}
+
+
