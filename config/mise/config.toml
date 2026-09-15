@@ -5,6 +5,9 @@ EDITOR = "nvim"
 [settings]
 experimental = true
 
+[settings.upgrade]
+auto_prune = true
+
 [tools]
 age = "latest"
 "aqua:ogham/exa" = "latest"
@@ -46,6 +49,7 @@ bat = "latest"
     bin = "tea", 
     format = "raw" 
 }
+gh = "latest"
 
 [tasks.setup_pi]
 run = [
