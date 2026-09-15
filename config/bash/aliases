@@ -8,4 +8,5 @@ alias g="git"
 alias ngit="nvim +Neogit"
 alias zdiff="nvim +Zdiff"
 alias review="nvim +'Zdiff origin/HEAD'"
-
+alias wm="workmux"
+alias wmd="workmux dashboard"

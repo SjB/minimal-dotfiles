@@ -74,6 +74,11 @@ if status is-interactive
         /usr/bin/jj util completion fish | source
     end
 
+    if command -q workmux
+        alias wm "workmux"
+        alias wmd "workmux dashboard"
+    end
+
     # NVM
     function __check_nvm --on-variable PWD --description 'Do nvm stuff'
              status --is-command-substitution; and return
