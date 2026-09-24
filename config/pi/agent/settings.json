@@ -2,7 +2,7 @@
   "lastChangelogVersion": "0.85.1",
   "theme": "dark",
   "defaultProvider": "opencode-go",
-  "defaultModel": "deepseek-v4-flash",
+  "defaultModel": "minimax-m3",
   "defaultThinkingLevel": "high",
   "packages": [
     "npm:pi-lens",
