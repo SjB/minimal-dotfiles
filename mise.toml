@@ -53,18 +53,14 @@ run = [
     'tmux run-shell ~/.config/tmux/plugins/tpm/bindings/install_plugins',
 ]
 
-[tasks.theme_links]
+[tasks.setup_theme]
 run = [
+  'test -d ~/.local/state/omarchy/current/theme || rsync -av config/omarchy/default/ $HOME/.local/state/omarchy/current/theme --mkpath',
   'mkdir -p ~/.config/btop/themes && ln -snf ~/.local/state/omarchy/current/theme/btop.theme ~/.config/btop/themes/current.theme',
   'mkdir -p ~/.config/nvim/plugin && ln -snf ~/.local/state/omarchy/current/theme/neovim-vimpack.lua ~/.config/nvim/plugin/theme.lua',
   'mkdir -p ~/.config/tmux && ln -snf ~/.local/state/omarchy/current/theme/tmux ~/.config/tmux/theme',
 ]
 
-[bootstrap.hooks.pre-packages]
-run = '''
-  test -d ~/.local/state/omarchy/current/theme || rsync -av config/omarchy/default/ "~/.local/state/omarchy/current/theme" --mkpath
-'''
-
 [tasks.bootstrap]
-depends = ['setup_shells', 'setup_tmux', 'setup_pi', 'setup_herdr', 'setup_tmux']
+depends = ['setup_theme', 'setup_shells', 'setup_tmux', 'setup_pi', 'setup_herdr', 'setup_tmux']
 
