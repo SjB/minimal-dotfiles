@@ -10,7 +10,7 @@ dotfiles.root = "{{config_root}}"
 dotfiles.default_mode = "symlink"
 
 [dotfiles]
-"~/.config/btop/btop.conf" = { source = "config/btop/btop.conf", mode = "symlink" }
+"~/.config/btop/btop.conf" = "config/btop/btop.conf"
 "~/.config/mise/config.toml" = "config/mise/config.toml"
 "~/.agents/AGENTS.md" = "config/agents/AGENTS.md"
 "~/.pi" = { source = "config/pi", mode = "symlink-each" }
