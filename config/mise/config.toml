@@ -65,7 +65,9 @@ run = [
 
 [tasks.skills]
 run = [
-    'npx skills add SjB/skills',
+    "test -d ~/.local/share/skills || git clone https://github.com/SjB/skills.git ~/.local/share/skills",
+    "git -C ~/.local/share/skills pull --rebase",
+    "ln -snf ~/.local/share/skills/skills ~/.agents/skills"
 ]
 
 [tasks.setup_herdr]
