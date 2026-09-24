@@ -5,9 +5,6 @@ EDITOR = "nvim"
 [settings]
 experimental = true
 
-[settings.upgrade]
-auto_prune = true
-
 [tools]
 age = "latest"
 "aqua:ogham/exa" = "latest"
@@ -79,9 +76,10 @@ run = [
 ]
 
 [tasks.setup_tmux]
-run = '''
-    git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm,
-'''
+run = [
+    'test -d ~/.config/tmux/plugins/tpm || git clone https://github.com/tmux-plugins/tpm  ~/.config/tmux/plugins/tpm',
+    'tmux run-shell ~/.config/tmux/plugins/tpm/bindings/install_plugins',
+]
 
 [tasks.light]
 run = [ ]
