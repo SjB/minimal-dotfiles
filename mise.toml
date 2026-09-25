@@ -3,7 +3,7 @@ USER_FULLNAME = "Steve Beaulac"
 USER_EMAIL = "steve@beaulac.me"
 DOTFILES_DIR = "{{config_root}}"
 SECOND_BRAIN = "~/Documents/sjb-brain"
-THEMES_STATE_DIR = ".local/state/omarchy/current/theme"
+THEMES_STATE_DIR = "~/.local/state/omarchy/current/theme"
 
 [settings]
 dotfiles.root = "{{config_root}}"
@@ -34,12 +34,13 @@ dotfiles.default_mode = "symlink"
 "~/.local/bin/git-bare-clone" = { source = "script/git-bare-clone", mode = "symlink" }
 "~/.local/bin/ssh-auth" = { source = "script/ssh-auth", mode = "symlink" }
 "~/.config/mise/env" = { source = "templates/dotenv.tmpl", mode = "template", template = "tera" }
-"~/.local/bin/omarchy-theme-set" = { source = "script/omarchy-theme-set", mode = "symlink" }
-"~/.local/bin/omarchy-theme-list" = { source = "script/omarchy-theme-list", mode = "symlink" }
-"~/.local/bin/omarchy-hook" = { source = "script/omarchy-hook", mode = "symlink" }
-"~/.local/bin/omarchy-theme-set-templates" = { source = "script/omarchy-theme-set-templates", mode = "symlink" }
-"~/.local/bin/omarchy-restart-tmux" = { source = "script/omarchy-restart-tmux", mode = "symlink" }
-"~/.local/bin/omarchy-restart-btop" = { source = "script/omarchy-restart-btop", mode = "symlink" }
+"~/.local/bin/sjb-omarchy-theme-set" = { source = "script/sjb-omarchy-theme-set", mode = "symlink" }
+"~/.local/bin/sjb-omarchy-theme-list" = { source = "script/sjb-omarchy-theme-list", mode = "symlink" }
+"~/.local/bin/sjb-omarchy-hook" = { source = "script/sjb-omarchy-hook", mode = "symlink" }
+"~/.local/bin/sjb-omarchy-theme-set-templates" = { source = "script/sjb-omarchy-theme-set-templates", mode = "symlink" }
+"~/.local/bin/sjb-omarchy-theme-color" = { source = "script/sjb-omarchy-theme-color", mode = "symlink" }
+"~/.local/bin/sjb-omarchy-restart-tmux" = { source = "script/sjb-omarchy-restart-tmux", mode = "symlink" }
+"~/.local/bin/sjb-omarchy-restart-btop" = { source = "script/sjb-omarchy-restart-btop", mode = "symlink" }
 
 [bootstrap.mise_shell_activate] # mise activation in shell startup files
 zprofile = "shims"

@@ -1,25 +1,25 @@
 color_bg0="{{ background }}"
-color_bg1="{{ color0 }}"
-color_bg2="{{ color7 }}"
+color_bg1="{{ dark_background }}"
+color_bg2="{{ darker_background }}"
 color_fg0="{{ foreground }}"
-color_fg1="{{ color3 }}"
+color_fg1="{{ light_foreground }}"
 
-color_status_fg="{{ color4 }}"
-color_status_bg="{{ color0 }}"
+color_status_fg="{{ light_foreground }}"
+color_status_bg="{{ muted }}"
 
 color_selected_fg="{{ selection_foreground }}"
 color_selected_bg="{{ selection_background }}"
 
-color_highlight_fg="{{ color2 }}"
+color_highlight_fg="{{ yellow }}"
 color_highlight_bg="{{ background }}"
 
-color_current_fg="{{ color1 }}"
+color_current_fg="{{ orange }}"
 color_current_bg="{{ background }}"
 
-color_check_fg="{{ color5 }}"
+color_check_fg="{{ green }}"
 
 pane_border_fg="{{ foreground }}"
-pane_border_selected_fg="{{ color2 }}"
+pane_border_selected_fg="{{ bright_foreground }}"
 
 set -g @prefix_highlight_fg "${color_highlight_fg}"
 set -g @prefix_highlight_bg "${color_highlight_bg}"

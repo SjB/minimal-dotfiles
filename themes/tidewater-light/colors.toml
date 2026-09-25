@@ -1,0 +1,35 @@
+# Tidewater Light
+# Warm paper palette: teal water, terracotta, sun-bleached sand.
+# Companion to tidewater-dark; same hues, mirrored lightness.
+
+mode = "light"
+
+accent = "#287874"
+selection = "#d3e2df"
+muted = "#8b9d99"
+
+background = "#f7f3ea"
+dark_background = "#f0eade"
+darker_background = "#e8e1d2"
+lighter_background = "#fcfaf4"
+
+foreground = "#1c2b2a"
+dark_foreground = "#5f7471"
+light_foreground = "#3c5251"
+bright_foreground = "#0f1c1b"
+
+red = "#c04833"
+yellow = "#956e18"
+orange = "#b15b2a"
+green = "#3c7a57"
+cyan = "#267a77"
+blue = "#3a6f9c"
+magenta = "#a74f78"
+brown = "#805c3f"
+
+bright_red = "#b43a28"
+bright_yellow = "#8a6111"
+bright_green = "#326f4b"
+bright_cyan = "#1f6e6a"
+bright_blue = "#2e6289"
+bright_magenta = "#954069"

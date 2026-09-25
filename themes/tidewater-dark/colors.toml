@@ -1,0 +1,35 @@
+# Tidewater Dark
+# Deep-teal night palette: teal water, coral light, warm sand.
+# Companion to tidewater-light; same hues, mirrored lightness.
+
+mode = "dark"
+
+accent = "#5cc9c1"
+selection = "#26403e"
+muted = "#47605e"
+
+background = "#0e1a1a"
+dark_background = "#0a1414"
+darker_background = "#060e0e"
+lighter_background = "#1a2b2a"
+
+foreground = "#d3e3e0"
+dark_foreground = "#6d8784"
+light_foreground = "#a4bfbc"
+bright_foreground = "#eef7f5"
+
+red = "#e57f6d"
+yellow = "#e3c07b"
+orange = "#e0996a"
+green = "#8fcaa4"
+cyan = "#5cc9c1"
+blue = "#74a9cf"
+magenta = "#cf8fb0"
+brown = "#9c7358"
+
+bright_red = "#f0937f"
+bright_yellow = "#f0d093"
+bright_green = "#a6dcb8"
+bright_cyan = "#7ad9d1"
+bright_blue = "#8fbfe0"
+bright_magenta = "#e0a6c6"

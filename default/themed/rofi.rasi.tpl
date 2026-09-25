@@ -1,20 +1,20 @@
 * {
     background: {{ background }};
     foreground: {{ foreground }};
-    active-background: {{ color2 }};
-    urgent-background: {{ color1 }};
+    active-background: {{ lighter_background }};
+    urgent-background: {{ accent }};
 
-    normal-foreground: {{ color3 }};
-    normal-background: {{ background }};
+    normal-foreground: {{ dark_foreground }};
+    normal-background: {{ dark_background }};
 
     selected-foreground: {{ selection_foreground }};
     selected-background: {{ selection_background }};
 
     seperator-color: {{ background }};
-    border-color: {{ color0 }};
+    border-color: {{ accent }};
 
-    prompt-color: {{ color4 }};
-    prompt-background-color: {{ color0 }};
+    prompt-color: {{ light_foreground }};
+    prompt-background-color: {{ darker_background }};
 
     window-border-size: 1px;
     window-border-radius: 8px;
