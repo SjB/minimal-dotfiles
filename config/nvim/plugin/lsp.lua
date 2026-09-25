@@ -191,17 +191,7 @@ local servers = {
         --         },
         --     },
     },
-    omnisharp = {
-        settings = {
-            ["omnisharp"] = {
-                useModernNet = true,
-                organizeImportsOnFormat = true,
-                enableImportCompletion = true,
-                cmd = { "omnisharp" },
-                root_dir = require("lspconfig.util").root_pattern("*.sln", "*.csproj", ".git"),
-            }
-        }
-    },
+    omnisharp = {},
 }
 
 local ensure_installed = vim.tbl_keys(servers or {})
