@@ -1,54 +1,43 @@
 {
   "providers": {
-    "dupont": {
-      "baseUrl": "http://172.25.11.30/v1",
-      "api": "openai-completions",
-      "models": [
-        {
-          "id": "ornith-1.0-35B",
-          "name": "ornith-1.0-35B",
-          "reasoning": true,
-          "input": ["text"],
-          "contextWindow": 131072,
-          "maxTokens": 131072,
-          "cost": { "input": 1, "output": 1, "cacheRead": 1, "cacheWrite": 1 }
-        }
-      ],
-      "compat": {
-        "supportsDeveloperRole": true,
-        "supportsReasoningEffort": true
-      }
-    },
+      "sagacity": {
+          "baseUrl": "https://agent.sagacity.ca/v1",
+          "api": "openai-completions",
+          "models": [
+              {
+                  "id": "Qwen3.8-27B",
+                  "name": "Qwen3.8-27B",
+                  "input": [
+                      "text",
+                      "image"
+                  ],
+                  "reasoning": true,
+                  "contextWindow": 131072,
+                  "maxTokens": 131072,
+                  "cost": {
+                      "input": 1,
+                      "output": 1,
+                      "cacheRead": 1,
+                      "cacheWrite": 1
+                  }
+              }
+          ],
+          "compat": {
+              "supportsDeveloperRole": true,
+              "supportsReasoningEffort": true
+          }
+      },
     "obelix": {
-      "baseUrl": "http://172.25.11.32/v1",
+      "baseUrl": "https://llm.nca.uwo.ca/v1",
       "api": "openai-completions",
       "models": [
         {
-          "id": "ornith-1.0-35B",
-          "name": "ornith-1.0-35B",
+          "id": "ornith-1.5-35B",
+          "name": "ornith-1.5-35B",
           "reasoning": true,
           "input": ["text"],
           "contextWindow": 131072,
           "maxTokens": 131072,
-          "cost": { "input": 1, "output": 1, "cacheRead": 1, "cacheWrite": 1 }
-        }
-      ],
-      "compat": {
-        "supportsDeveloperRole": true,
-        "supportsReasoningEffort": true
-      }
-    },
-    "bianca": {
-      "baseUrl": "http://172.25.11.33/v1",
-      "api": "openai-completions",
-      "models": [
-        {
-          "id": "gemma-4-12B-coder",
-          "name": "gemma-4-12B-coder",
-          "reasoning": true,
-          "input": ["text"],
-          "contextWindow": 128000,
-          "maxTokens": 65536,
           "cost": { "input": 1, "output": 1, "cacheRead": 1, "cacheWrite": 1 }
         }
       ],
