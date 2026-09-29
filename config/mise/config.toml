@@ -7,6 +7,7 @@ experimental = true
 
 [tools]
 age = "latest"
+"aqua:rust-lang/rustup" = "latest"
 "aqua:ogham/exa" = "latest"
 bun = "latest"
 clang = "latest"
