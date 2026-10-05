@@ -10,6 +10,7 @@ manage_ssh_config = true
 
 [experimental]
 pane_history = true
+allow_nested = true
 
 [theme]
 name = "terminal"
@@ -17,6 +18,14 @@ name = "terminal"
 auto_switch = false
 [keys]
 prefix = "ctrl+space"
+reload_config = "prefix+q"
+help = "prefix+?"
+detach = "prefix+d"
+zoom = "prefix+z"
+copy_mode = "prefix+["
+last_pane = "prefix+;"
+focus_agent = "prefix+alt+1..9"
+switch_workspace = "prefix+shift+1..9"
 
 # Override herdr's built-in "new worktree" key (prefix+shift+g) with worktrunk's
 # default-branch switch/create picker:
