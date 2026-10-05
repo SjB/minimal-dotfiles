@@ -1,5 +1,5 @@
 vim.pack.add({
-    { src = 'https://github.com/SjB/orgmode', version = 'sjb-wip' }, 
+    { src = 'https://github.com/nvim-orgmode/orgmode'  }, 
     { src = 'https://github.com/chipsenkbeil/org-roam.nvim' },
     { src = 'https://github.com/akinsho/org-bullets.nvim' },
 })
@@ -9,8 +9,8 @@ require('orgmode').setup({
             use_vim_ui = true
         }
     },
-    org_agenda_files = {'~/Documents/notes/*project*org', '~/Documents/notes/Inbox*org', '~/Documents/journals/*.org'},
-    org_default_notes_file = "~/Documents/notes/Inbox.org",
+    org_agenda_files = {'~/Documents/GTD/*project*org', '~/Documents/GTD/Inbox*org', '~/Documents/GTD/journals/*.org'},
+    org_default_notes_file = "~/Documents/GTD/Inbox.org",
     org_todo_keywords = { 'TODO(t)', 'NEXT(n)', '|', 'DONE(d)', 'DELEGATED(a)' },
     mappings = {
         capture = {
@@ -25,7 +25,7 @@ require('orgmode').setup({
         },
         j = {
             description = "Journal entry",
-            target = "~/Documents/notes/journals/%<%Y-%m-%d>.org",
+            target = "~/Documents/GTD/journals/%<%Y-%m-%d>.org",
             template = "* %<%Y-%m-%d %H:%M> %?\n",
         },
     },
@@ -65,7 +65,7 @@ require('org-roam').setup({
     bindings = {
         prefix = "<LocalLeader>oO",
     },
-    directory = "~/Documents/notes",
+    directory = "~/Documents/GTD",
     extensions = {
         dailies = {
             directory = "journals"
