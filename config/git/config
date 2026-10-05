@@ -12,9 +12,10 @@ ui = auto
 
 [branch]
 autosetupmerge = true
+sort = -committerdate
 
 [tag]
-sort = version:refname
+sort = -version:refname
 
 [diff]
 algorithm = histogram
@@ -33,10 +34,8 @@ pruneTags = true
 all = true
 
 [commit]
+verbose = true
 #       gpgsign = true
-
-[help]
-autocorrect = prompt
 
 [rerere]
 enabled = true
@@ -53,10 +52,9 @@ pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(
 layout = BASE,MERGED + BASE,LOCAL + BASE,REMOTE
 
 [merge]
-conflictStyle = diff3
+conflictStyle = zdiff3
 summary = true
 verbosity = 1
-tool = nvimdiff
 
 [apply]
 whitespace = nowarn
@@ -69,24 +67,7 @@ whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 [advice]
 statusHints = false
 
-[url "git@github.com:"]
-insteadOf = "gh:"
-pushInsteadOf = "github:"
-pushInsteadOf = "git://github.com/"
-
-[url "git://github.com/"]
-insteadOf = "github:"
-
-[url "git@gist.github.com:"]
-insteadOf = "gst:"
-pushInsteadOf = "gist:"
-pushInsteadOf = "git://gist.github.com/"
-
 [alias]
-
-# annex
-xl = annex list
-xg = annex list
 
 # add
 a = add
@@ -127,16 +108,16 @@ last = diff HEAD^
 # log
 l = log --graph --date=short
 la = log --graph --date=short --all
+lg = log --pretty=format:'%Cred%h%Creset - %C(blue bold)[%ad] %Creset%C(yellow)%d %Creset%s %C(green bold)<%an>%Creset' --abbrev-commit --date=short
+llg = log --pretty=format:'%Cred%h%Creset - %C(blue bold)[%ad] %Creset%C(yellow)%d %Creset%s %C(green bold)<%an>%Creset' --abbrev-commit --date=short --graph
+lls = git log --pretty=format:"[%h] %ae, %ar: %s" --stat
+lc = log ORIG_HEAD.. --stat --no-merges
 wu = log -p origin..@{0}
 changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
 short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
 changelog = log --pretty=format:\" * %s\"
 shortnocolor = log --pretty=format:\"%h %cr %cn %s\"
-lg = log --pretty=format:'%Cred%h%Creset - %C(blue bold)[%ad] %Creset%C(yellow)%d %Creset%s %C(green bold)<%an>%Creset' --abbrev-commit --date=short
-llg = log --pretty=format:'%Cred%h%Creset - %C(blue bold)[%ad] %Creset%C(yellow)%d %Creset%s %C(green bold)<%an>%Creset' --abbrev-commit --date=short --graph
-lls = git log --pretty=format:"[%h] %ae, %ar: %s" --stat
 showfiles = show --name-only
-lc = log ORIG_HEAD.. --stat --no-merges
 
 # rebase
 rc = rebase --continue
@@ -159,7 +140,6 @@ diffstat = diff --stat
 changes = diff --name-status -r
 
 # stash
-stashes = stash list
 ss = stash
 sl = stash list
 sa = stash apply
@@ -178,7 +158,6 @@ dt = difftools
 
 rv = review
 ls = ls-files
-gconf = config --global
 
 c = clone --recursive
 bc = clone --bare
@@ -189,12 +168,24 @@ wtl = worktree list
 wtr = worktree remove
 
 ignore = "!gi() { curl -sL https://www.toptal.com/developers/gitignore/api/$@ ;}; gi"
-[credential "https://github.com"]
+
+[url "git@github.com:"]
+insteadOf = "gh:"
+pushInsteadOf = "github:"
+pushInsteadOf = "git://github.com/"
+
+[url "git://github.com/"]
+insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+insteadOf = "gst:"
+pushInsteadOf = "gist:"
+pushInsteadOf = "git://gist.github.com/"
+
+[credential "https://git.nca.uwo.ca"]
 	helper = 
-	helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
+	helper = !tea login helper
+
 [credential "http://gitea.sagacity.ca"]
 	helper = 
 	helper = !tea login helper
