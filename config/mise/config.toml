@@ -1,6 +1,7 @@
 [env]
 _.file = '~/.config/mise/env'
 EDITOR = "nvim"
+RUSTUP_HOME = "{{env.HOME}}/.rustup"
 
 [settings]
 experimental = true
